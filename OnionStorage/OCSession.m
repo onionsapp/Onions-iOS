@@ -143,7 +143,9 @@ static OCSession * _mainSession = nil;
             [[PFUser currentUser] saveInBackground];
         }
         
-        completion(error ? NO : YES);
+        if (completion) {
+            completion(error ? NO : YES);
+        }
     }];
 }
 
