@@ -27,6 +27,9 @@
 #import <Foundation/Foundation.h>
 #import "RNCryptor.h"
 
+
+#define kDefaultIterations 10000
+
 @interface RNEncryptor : RNCryptor
 - (RNEncryptor *)initWithSettings:(RNCryptorSettings)settings
                     encryptionKey:(NSData *)encryptionKey

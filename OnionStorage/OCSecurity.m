@@ -8,9 +8,6 @@
 
 #import "OCSecurity.h"
 #import "OCSession.h"
-#import "RNEncryptor.h"
-#import "RNDecryptor.h"
-#import "RNCryptor.h"
 
 @implementation OCSecurity
 
@@ -29,13 +26,13 @@
     return nil;
 }
 
-+ (NSString *)decryptText:(NSString *)text {
++ (NSString *)decryptText:(NSString *)text iterations:(NSNumber *)iterations {
     if (![OCSession Password]) {
         return nil;
     }
     
     NSError *error;
-    NSData *decryptedData = [RNDecryptor decryptData:[[NSData alloc] initWithBase64EncodedString:text options:NSDataBase64DecodingIgnoreUnknownCharacters] withSettings:kRNCryptorAES256Settings password:[OCSession Password] error:&error];
+    NSData *decryptedData = [RNDecryptor decryptData:[[NSData alloc] initWithBase64EncodedString:text options:NSDataBase64DecodingIgnoreUnknownCharacters] iterations:[iterations intValue] password:[OCSession Password] error:&error];
     if (!error) {
         return [[NSString alloc] initWithData:decryptedData encoding:NSUTF8StringEncoding];
     }

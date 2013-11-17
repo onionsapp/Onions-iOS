@@ -52,6 +52,17 @@ static const NSUInteger kPreambleSize = 2;
 @synthesize password = _password;
 @synthesize settings = _settings;
 
+#pragma mark - Extra Onions Parameters
++ (NSData *)decryptData:(NSData *)theCipherText iterations:(int)iterations password:(NSString *)aPassword error:(NSError **)anError
+{
+    RNCryptorSettings onionSettings = kRNCryptorAES256Settings;
+    onionSettings.keySettings.rounds = iterations;
+    onionSettings.HMACKeySettings.rounds = iterations;
+    
+    return [RNDecryptor decryptData:theCipherText withSettings:onionSettings password:aPassword error:anError];
+}
+
+
 + (NSData *)decryptData:(NSData *)theCipherText withSettings:(RNCryptorSettings)settings password:(NSString *)aPassword error:(NSError **)anError
 {
   RNDecryptor *cryptor = [[self alloc] initWithPassword:aPassword

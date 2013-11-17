@@ -48,7 +48,12 @@
 
 + (NSData *)encryptData:(NSData *)thePlaintext withSettings:(RNCryptorSettings)theSettings password:(NSString *)aPassword error:(NSError **)anError
 {
-  RNEncryptor *cryptor = [[self alloc] initWithSettings:theSettings
+    
+    RNCryptorSettings onionSettings = theSettings;
+    onionSettings.HMACKeySettings.rounds = kDefaultIterations;
+    onionSettings.keySettings.rounds = kDefaultIterations;
+    
+  RNEncryptor *cryptor = [[self alloc] initWithSettings:onionSettings
                                                password:aPassword
                                                 handler:^(RNCryptor *c, NSData *d) {}];
   return [self synchronousResultForCryptor:cryptor data:thePlaintext error:anError];

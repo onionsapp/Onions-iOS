@@ -12,16 +12,7 @@
 #import <Parse/PFObject+Subclass.h>
 
 @implementation Onion
-@dynamic onionTitle, onionInfo, userId;
-/*
--(instancetype)initWithDictionary:(NSDictionary *)dict {
-    if (self = [super init]) {
-        self.title = dict[@"HashedTitle"] ? dict[@"HashedTitle"] : nil;
-        self.info = dict[@"HashedInfo"] ? dict[@"HashedInfo"] : nil;
-    }
-    return self;
-}
-*/
+@dynamic onionTitle, onionInfo, userId, iterations;
 
 + (NSString *)parseClassName {
     return @"Onion";
@@ -34,6 +25,7 @@
         
         self.onionTitle = [OCSecurity encryptText:self.onionTitle];
         self.onionInfo = [OCSecurity encryptText:self.onionInfo];
+        self.iterations = @(kDefaultIterations);
         self.userId = [PFUser currentUser].objectId;
         
         [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -49,8 +41,8 @@
 }
 
 - (void)decrypt {
-    self.onionTitle = [OCSecurity decryptText:self.onionTitle];
-    self.onionInfo = [OCSecurity decryptText:self.onionInfo];
+    self.onionTitle = [OCSecurity decryptText:self.onionTitle iterations:self.iterations];
+    self.onionInfo = [OCSecurity decryptText:self.onionInfo iterations:self.iterations];
 }
 
 + (void)decryptOnions:(NSArray *)onions withCompletion:(void (^)(void))completion {

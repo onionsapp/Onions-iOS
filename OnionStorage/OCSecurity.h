@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RNEncryptor.h"
+#import "RNDecryptor.h"
+#import "RNCryptor.h"
 
 #define kStretchedShaIterations 15000
 
 @interface OCSecurity : NSObject
 
 + (NSString *)encryptText:(NSString *)text;
-+ (NSString *)decryptText:(NSString *)text;
++ (NSString *)decryptText:(NSString *)text iterations:(NSNumber *)iterations;
 + (NSString *)stretchedCredentialString:(NSString *)credential;
 
 @end
