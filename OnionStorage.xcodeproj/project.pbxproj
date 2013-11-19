@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C02CBD06183B9697003C0C94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EE708417B8142A00C97F0B /* Foundation.framework */; };
+		C02CBD07183B9697003C0C94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EE708217B8142A00C97F0B /* UIKit.framework */; };
+		C02CBD0D183B9697003C0C94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02CBD0B183B9697003C0C94 /* InfoPlist.strings */; };
+		C02CBD0F183B9697003C0C94 /* OnionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CBD0E183B9697003C0C94 /* OnionsTests.m */; };
+		C02CBD18183B97BF003C0C94 /* XCTestCase+OnionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CBD17183B97BF003C0C94 /* XCTestCase+OnionsTestCase.m */; };
+		C02CBD1F183B9D91003C0C94 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02CBD1E183B9D91003C0C94 /* Parse.framework */; };
+		C02CBD20183B9D91003C0C94 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02CBD1E183B9D91003C0C94 /* Parse.framework */; };
+		C02CBD22183B9F1C003C0C94 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02CBD21183B9F1C003C0C94 /* XCTest.framework */; };
 		C032B7C917BE54C400BB7C2E /* OCHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C032B7C817BE54C400BB7C2E /* OCHelpers.m */; };
 		C032B7D517C06A0000BB7C2E /* OCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C032B7D317C06A0000BB7C2E /* OCAboutViewController.m */; };
 		C032B7D617C06A0000BB7C2E /* OCAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C032B7D417C06A0000BB7C2E /* OCAboutViewController.xib */; };
@@ -29,7 +37,6 @@
 		C057668D17B9081000697D8A /* OCOnionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C057668B17B9081000697D8A /* OCOnionsViewController.xib */; };
 		C05A2E8817BDA26900395C8D /* OCNewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05A2E8617BDA26900395C8D /* OCNewAccountViewController.m */; };
 		C05A2E8917BDA26900395C8D /* OCNewAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05A2E8717BDA26900395C8D /* OCNewAccountViewController.xib */; };
-		C0A8DF1F182FED65004D28A3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A8DF1E182FED65004D28A3 /* Parse.framework */; };
 		C0A8DF21182FED6D004D28A3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A8DF20182FED6D004D28A3 /* SystemConfiguration.framework */; };
 		C0A8DF23182FED74004D28A3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A8DF22182FED74004D28A3 /* MobileCoreServices.framework */; };
 		C0A8DF25182FF16F004D28A3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A8DF24182FF16F004D28A3 /* AudioToolbox.framework */; };
@@ -70,7 +77,27 @@
 		C0EE70DC17B8222900C97F0B /* Onion.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70DA17B8222900C97F0B /* Onion.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C02CBD11183B9697003C0C94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0EE707717B8142A00C97F0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0EE707E17B8142A00C97F0B;
+			remoteInfo = OnionStorage;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C02CBD03183B9697003C0C94 /* OnionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02CBD04183B9697003C0C94 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C02CBD0A183B9697003C0C94 /* OnionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OnionsTests-Info.plist"; sourceTree = "<group>"; };
+		C02CBD0C183B9697003C0C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C02CBD0E183B9697003C0C94 /* OnionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnionsTests.m; sourceTree = "<group>"; };
+		C02CBD10183B9697003C0C94 /* OnionsTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnionsTests-Prefix.pch"; sourceTree = "<group>"; };
+		C02CBD16183B97BF003C0C94 /* XCTestCase+OnionsTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+OnionsTestCase.h"; sourceTree = "<group>"; };
+		C02CBD17183B97BF003C0C94 /* XCTestCase+OnionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+OnionsTestCase.m"; sourceTree = "<group>"; };
+		C02CBD1E183B9D91003C0C94 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C02CBD21183B9F1C003C0C94 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C032B7C717BE54C400BB7C2E /* OCHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHelpers.h; sourceTree = "<group>"; };
 		C032B7C817BE54C400BB7C2E /* OCHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCHelpers.m; sourceTree = "<group>"; };
 		C032B7D217C06A0000BB7C2E /* OCAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAboutViewController.h; sourceTree = "<group>"; };
@@ -100,7 +127,6 @@
 		C05A2E8517BDA26900395C8D /* OCNewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCNewAccountViewController.h; sourceTree = "<group>"; };
 		C05A2E8617BDA26900395C8D /* OCNewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCNewAccountViewController.m; sourceTree = "<group>"; };
 		C05A2E8717BDA26900395C8D /* OCNewAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCNewAccountViewController.xib; sourceTree = "<group>"; };
-		C0A8DF1E182FED65004D28A3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../Freelance/CoffreeApp/Parse.framework; sourceTree = "<group>"; };
 		C0A8DF20182FED6D004D28A3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C0A8DF22182FED74004D28A3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C0A8DF24182FF16F004D28A3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -164,6 +190,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C02CBD00183B9697003C0C94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02CBD22183B9F1C003C0C94 /* XCTest.framework in Frameworks */,
+				C02CBD07183B9697003C0C94 /* UIKit.framework in Frameworks */,
+				C02CBD20183B9D91003C0C94 /* Parse.framework in Frameworks */,
+				C02CBD06183B9697003C0C94 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0EE707C17B8142A00C97F0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,8 +211,8 @@
 				C0A8DF27182FF184004D28A3 /* CoreLocation.framework in Frameworks */,
 				C0A8DF25182FF16F004D28A3 /* AudioToolbox.framework in Frameworks */,
 				C0A8DF23182FED74004D28A3 /* MobileCoreServices.framework in Frameworks */,
+				C02CBD1F183B9D91003C0C94 /* Parse.framework in Frameworks */,
 				C0A8DF21182FED6D004D28A3 /* SystemConfiguration.framework in Frameworks */,
-				C0A8DF1F182FED65004D28A3 /* Parse.framework in Frameworks */,
 				C0EE70C917B8184B00C97F0B /* QuartzCore.framework in Frameworks */,
 				C0EE70B317B8146A00C97F0B /* Security.framework in Frameworks */,
 				C0EE708317B8142A00C97F0B /* UIKit.framework in Frameworks */,
@@ -187,6 +224,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C02CBD08183B9697003C0C94 /* OnionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				C02CBD0E183B9697003C0C94 /* OnionsTests.m */,
+				C02CBD19183B97C5003C0C94 /* Onions TestCase Category */,
+				C02CBD09183B9697003C0C94 /* Supporting Files */,
+			);
+			path = OnionsTests;
+			sourceTree = "<group>";
+		};
+		C02CBD09183B9697003C0C94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C02CBD0A183B9697003C0C94 /* OnionsTests-Info.plist */,
+				C02CBD0B183B9697003C0C94 /* InfoPlist.strings */,
+				C02CBD10183B9697003C0C94 /* OnionsTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C02CBD19183B97C5003C0C94 /* Onions TestCase Category */ = {
+			isa = PBXGroup;
+			children = (
+				C02CBD16183B97BF003C0C94 /* XCTestCase+OnionsTestCase.h */,
+				C02CBD17183B97BF003C0C94 /* XCTestCase+OnionsTestCase.m */,
+			);
+			name = "Onions TestCase Category";
+			sourceTree = "<group>";
+		};
 		C032B7D017C069CB00BB7C2E /* About View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,9 +380,8 @@
 				C039E18E17B9D6410052007A /* icon_58.png */,
 				C039E18F17B9D6410052007A /* icon_80.png */,
 				C039E19017B9D6410052007A /* icon_120.png */,
-				C0EE70C817B8184B00C97F0B /* QuartzCore.framework */,
-				C0EE70B217B8146A00C97F0B /* Security.framework */,
 				C0EE708817B8142A00C97F0B /* OnionStorage */,
+				C02CBD08183B9697003C0C94 /* OnionsTests */,
 				C0EE708117B8142A00C97F0B /* Frameworks */,
 				C0EE708017B8142A00C97F0B /* Products */,
 			);
@@ -326,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				C0EE707F17B8142A00C97F0B /* OnionStorage.app */,
+				C02CBD03183B9697003C0C94 /* OnionsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,17 +399,21 @@
 		C0EE708117B8142A00C97F0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C02CBD21183B9F1C003C0C94 /* XCTest.framework */,
+				C0EE70C817B8184B00C97F0B /* QuartzCore.framework */,
+				C0EE70B217B8146A00C97F0B /* Security.framework */,
 				C0ABF5D41835BD4000A0E51F /* StoreKit.framework */,
 				C0A8DF2A182FF1C4004D28A3 /* CFNetwork.framework */,
 				C0A8DF28182FF1A6004D28A3 /* libz.1.1.3.dylib */,
+				C02CBD1E183B9D91003C0C94 /* Parse.framework */,
 				C0A8DF26182FF183004D28A3 /* CoreLocation.framework */,
 				C0A8DF24182FF16F004D28A3 /* AudioToolbox.framework */,
 				C0A8DF22182FED74004D28A3 /* MobileCoreServices.framework */,
 				C0A8DF20182FED6D004D28A3 /* SystemConfiguration.framework */,
-				C0A8DF1E182FED65004D28A3 /* Parse.framework */,
 				C0EE708217B8142A00C97F0B /* UIKit.framework */,
 				C0EE708417B8142A00C97F0B /* Foundation.framework */,
 				C0EE708617B8142A00C97F0B /* CoreGraphics.framework */,
+				C02CBD04183B9697003C0C94 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -438,6 +508,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C02CBD02183B9697003C0C94 /* OnionsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C02CBD15183B9697003C0C94 /* Build configuration list for PBXNativeTarget "OnionsTests" */;
+			buildPhases = (
+				C02CBCFF183B9697003C0C94 /* Sources */,
+				C02CBD00183B9697003C0C94 /* Frameworks */,
+				C02CBD01183B9697003C0C94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C02CBD12183B9697003C0C94 /* PBXTargetDependency */,
+			);
+			name = OnionsTests;
+			productName = OnionsTests;
+			productReference = C02CBD03183B9697003C0C94 /* OnionsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C0EE707E17B8142A00C97F0B /* OnionStorage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0EE70A217B8142A00C97F0B /* Build configuration list for PBXNativeTarget "OnionStorage" */;
@@ -465,6 +553,9 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = BG;
 				TargetAttributes = {
+					C02CBD02183B9697003C0C94 = {
+						TestTargetID = C0EE707E17B8142A00C97F0B;
+					};
 					C0EE707E17B8142A00C97F0B = {
 						DevelopmentTeam = RMTZ2ZJ8M5;
 					};
@@ -483,11 +574,20 @@
 			projectRoot = "";
 			targets = (
 				C0EE707E17B8142A00C97F0B /* OnionStorage */,
+				C02CBD02183B9697003C0C94 /* OnionsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C02CBD01183B9697003C0C94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02CBD0D183B9697003C0C94 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0EE707D17B8142A00C97F0B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -521,6 +621,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C02CBCFF183B9697003C0C94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02CBD18183B97BF003C0C94 /* XCTestCase+OnionsTestCase.m in Sources */,
+				C02CBD0F183B9697003C0C94 /* OnionsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0EE707B17B8142A00C97F0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -555,7 +664,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C02CBD12183B9697003C0C94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0EE707E17B8142A00C97F0B /* OnionStorage */;
+			targetProxy = C02CBD11183B9697003C0C94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		C02CBD0B183B9697003C0C94 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C02CBD0C183B9697003C0C94 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		C0EE708B17B8142A00C97F0B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -575,6 +700,73 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C02CBD13183B9697003C0C94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OnionStorage.app/OnionStorage";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"/Users/brgordon/Desktop/Github/Onions/Onions-iOS",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnionsTests/OnionsTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "OnionsTests/OnionsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C02CBD14183B9697003C0C94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OnionStorage.app/OnionStorage";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"/Users/brgordon/Desktop/Github/Onions/Onions-iOS",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnionsTests/OnionsTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "OnionsTests/OnionsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		C0EE70A017B8142A00C97F0B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -637,7 +829,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/brgordon/Desktop/Freelance/CoffreeApp,
+					"/Users/brgordon/Desktop/Github/Onions/Onions-iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OnionStorage/OnionStorage-Prefix.pch";
@@ -658,7 +850,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/brgordon/Desktop/Freelance/CoffreeApp,
+					"/Users/brgordon/Desktop/Github/Onions/Onions-iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OnionStorage/OnionStorage-Prefix.pch";
@@ -676,6 +868,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C02CBD15183B9697003C0C94 /* Build configuration list for PBXNativeTarget "OnionsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C02CBD13183B9697003C0C94 /* Debug */,
+				C02CBD14183B9697003C0C94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C0EE707A17B8142A00C97F0B /* Build configuration list for PBXProject "OnionStorage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

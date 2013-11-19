@@ -18,6 +18,7 @@
 + (NSString *)encryptText:(NSString *)text;
 + (NSString *)decryptText:(NSString *)text iterations:(NSNumber *)iterations;
 + (NSString *)stretchedCredentialString:(NSString *)credential;
++ (NSData *)sha256:(NSData *)dataIn;
 
 @end
 
