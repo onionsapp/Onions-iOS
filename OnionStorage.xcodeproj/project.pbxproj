@@ -714,7 +714,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"/Users/brgordon/Desktop/Github/Onions/Onions-iOS",
+					"\"${SRCROOT}\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OnionsTests/OnionsTests-Prefix.pch";
@@ -750,7 +750,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"/Users/brgordon/Desktop/Github/Onions/Onions-iOS",
+					"\"${SRCROOT}\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OnionsTests/OnionsTests-Prefix.pch";
@@ -828,8 +828,8 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
+					"\"${SRCROOT}\"",
 					"$(inherited)",
-					"/Users/brgordon/Desktop/Github/Onions/Onions-iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OnionStorage/OnionStorage-Prefix.pch";
@@ -849,8 +849,8 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
+					"\"${SRCROOT}\"",
 					"$(inherited)",
-					"/Users/brgordon/Desktop/Github/Onions/Onions-iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OnionStorage/OnionStorage-Prefix.pch";
@@ -875,6 +875,7 @@
 				C02CBD14183B9697003C0C94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0EE707A17B8142A00C97F0B /* Build configuration list for PBXProject "OnionStorage" */ = {
 			isa = XCConfigurationList;
