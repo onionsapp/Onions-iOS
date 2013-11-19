@@ -14,11 +14,12 @@ The most current version is 1.0
 * [How do I build and test this app?](#how-do-i-build-and-test-this-app)
 * The App
   * [Parse/API Objects](#parse-api-objects)
-  * [Logging In and Signing Up](#logging-in-and-signing-up)
   * [OCSecurity](#ocsecurity)
   * [OCSession](#ocsession)
-  * [View Controllers](#view-controllers)
+  * [Logging In and Signing Up](#logging-in-and-signing-up)
+  * [Manipulating Onions](#manipulating-onions)
   * [3rd Party Libraries](#3rd-party-libraries)
+* [Unit Tests](#unit-tests)
 * [Designing for the Future](#designing-for-the-future)
 * [License](#license)
 
@@ -31,9 +32,8 @@ An Onion is just a blob of text-based information. It is comprised of a "Title" 
 There's only a couple things necessary to build and test the app. Here's a list you should follow, and you'll be up and running in no time.
 
 1. Create a free [Parse.com](https://www.parse.com) account
-2. Go to the [Parse Quickstart Page](https://parse.com/apps/quickstart) and download the Parse SDK for iOS
-3. Add the Parse framework by following the instructions on the page.
-4. Stop at Step 9, and find your Application ID and Client ID keys.
+2. Go to the [Parse Quickstart Page](https://parse.com/apps/quickstart)
+4. Scroll down to Step 9, and find your Application ID and Client ID keys.
 5. In Xcode, create and add a <code>ParseConstants.h</code> file that looks like this:
 
 ```objc
@@ -48,7 +48,7 @@ There's only a couple things necessary to build and test the app. Here's a list 
 #endif
 ```
 
-Build and run the App. If everything works, we're in business! If not, go through the Parse installation process and make sure you followed all of the directions for adding the Framework, and that all of the extra frameworks are installed as well.
+Build and run the App. If everything works, we're in business!
 
 ## Parse/API Objects
 
