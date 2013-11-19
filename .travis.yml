@@ -3,5 +3,6 @@ language: objective-c
 before_script: 
 - chmod a+x travis/script.sh
 - osascript -e 'tell app "iPhone Simulator" to quit'
+- echo -e "#define PARSE_APP_ID @\"fun\"\n#define PARSE_CLIENT_ID @\"world\"" > OnionStorage/ParseConstants.h
 
 script: travis/script.sh
