@@ -98,4 +98,18 @@
     [self setUpOCSession];
 }
 
+- (void)testIncorrectIterationsCount {
+    // Test String
+    NSString *testString = @"HelloWorld";
+    
+    // Encrypt It
+    NSString *encryptedString = [OCSecurity encryptText:testString];
+    
+    // Incorrectly Decrypt It
+    NSString *decryptedString = [OCSecurity decryptText:encryptedString iterations:@(kDefaultIterations - 1)];
+    
+    // Test Inequality
+    [self testInequalityOfObject:testString andObject:decryptedString fromMethod:__PRETTY_FUNCTION__];
+}
+
 @end
