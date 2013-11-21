@@ -16,7 +16,7 @@ The most current version is 1.0
   * [Parse/API Objects](#parse-api-objects)
   * [OCSecurity](#ocsecurity)
   * [OCSession](#ocsession)
-  * [Logging In and Signing Up](#logging-in-and-signing-up)
+  * [Logging In / Signing Up](#logging-in--signing-up)
   * [Manipulating Onions](#manipulating-onions)
   * [3rd Party Libraries](#3rd-party-libraries)
 * [Unit Tests](#unit-tests)
@@ -70,3 +70,55 @@ The Onion object contains four important properties necessary to the app.
 * <code>userId</code> - The parameter that links the onion to a certain user (<code>[[PFUser currentUser] objectId]</code>)
 
 We're using the iterations as a future-proof property so that as computers get faster, we can change the number of rounds for PBKDF2 dynamically. This property means that we can make the <code>kDefaultIterations</code> go up for encryption of new onions, and keep backwards compatibility to older Onions.
+
+## OCSecurity
+
+All of the security code is handled in the <code>OCSecurity.{h,m}</code> class. OCSecurity is basically a wrapper on top of [RNCryptor](https://github.com/rnapier/RNCryptor) which is a wrapper on top of the CommonCrypto framework included in the SDK. There are only 3 main methods that the app uses here:
+
+**Encrypt Text**
+
+Text encryption uses the standard RNCryptor encrypt data method that takes in a password, except I've modified it to also take in an iterations count as well. RNCryptor bakes 10,000 iterations in as the PBKDF2 iteration count, but I've changed that to future proof the app.
+
+<code>+ (NSString *)encryptText:(NSString *)text</code> is the method that handles all encryption that Onions does.
+
+**Decrypt Text**
+
+Text decryption, like encryption, uses a modified RNCryptor function with an iterations parameter added. The iteration count is on the Onion object.
+
+<code>+ (NSString *)decryptText:(NSString *)text iterations:(NSNumber *)iterations</code> is the decryption method.
+
+**Stretching Credentials**
+
+Before sending login/sign up information to the server I am recursively SHA-256 hashing the username and password using the following method. It does 15,000 recursive hashes and then sends it out. The only time I call this method is in the login/sign up View Controllers.
+
+<code>+ (NSString *)stretchedCredentialString:(NSString *)credential</code>
+
+## OCSession
+
+## Logging In / Signing Up
+
+Your user credentials are very important not to reveal to the server - or to even send through an internet connection. So, before ever authenticating your user account or creating one, I'm recursively SHA-256 hashing your username and password 15,000 times using the <code>[OCSecurity stretchedCredentialString:]</code> method. On your password, I'm actually appending your username to the end of the string before ever hashing that as well. So the process looks something like this:
+
+```
+username: "Hello"
+password: "World"
+
+
+becomes this:
+
+
+username: "Hello"
+password: "WorldHello"
+
+
+which becomes this:
+
+
+username:
+  "VyijIO3XTijhwjrpuyDNpH
+  JNpBOBKxwb180lYWbo2YY=w"
+
+password:
+  "K/SWeWOeER/zGgOYH8RXv
+  BuVBzRo+0S3vK6veR/L4ko="
+```
