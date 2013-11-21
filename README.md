@@ -150,4 +150,6 @@ There need to be Unit Tests that prove extra data is not sent over an internet c
 
 ## License
 
-License coming soon...
+Onions is licensed under the **Attribution-NonCommercial 3.0 Unported** Creative Commons license.
+
+The full text can be found [Here](http://creativecommons.org/licenses/by-nc/3.0/legalcode).
