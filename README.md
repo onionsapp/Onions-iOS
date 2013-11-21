@@ -95,6 +95,8 @@ Before sending login/sign up information to the server I am recursively SHA-256 
 
 ## OCSession
 
+<code>OCSession.{h,m}</code> is a singleton object that holds all Onion data and your plaintext password (hence the stretching of credentials) that is used to generate your AES keys and HMAC keys for encryption/decryption. The OCSession object lives at login and dies at logout. Because of the sensitive nature of the app and your data, any time the app goes to the background all of your Onion data is cleared out of memory. Nothing is ever saved on disk, and your password is **never** sent in the clear through an internet connection. Parse uses an SSL connection as it is to encrypt communications going to/from the server, but there's not point in assuming that's totally secure. All of OCSession's properties and their getters/setters/auxilliary functions have been abstracted to class-level methods that work on the <code>OCSession mainSession</code> instance.
+
 ## Logging In / Signing Up
 
 Your user credentials are very important not to reveal to the server - or to even send through an internet connection. So, before ever authenticating your user account or creating one, I'm recursively SHA-256 hashing your username and password 15,000 times using the <code>[OCSecurity stretchedCredentialString:]</code> method. On your password, I'm actually appending your username to the end of the string before ever hashing that as well. So the process looks something like this:
@@ -122,3 +124,30 @@ password:
   "K/SWeWOeER/zGgOYH8RXv
   BuVBzRo+0S3vK6veR/L4ko="
 ```
+
+## Manipulating Onions
+
+Onions can be created, edited and deleted. Saving an Onion will encrypt its content using the <code>[OCSession saveOnion]</code> method which runs <code>[OCSecurity encryptText]</code> on the <code>onionTitle</code> and <code>onionInfo</code> properties. It then saves the encrypted object in the background.
+
+After you login, your previously saved Onions are retrieved from the server and then decrypted to show you on screen.
+
+## 3rd Party Libraries
+
+* [RNCryptor](https://github.com/rnapier/RNCryptor)
+* [Colours for iOS](https://github.com/bennyguitar/Colours-for-iOS)
+
+## Unit Tests
+
+Right now, there is a small unit testing suite in the <code>OnionsTests</code> folder inside of the project. As of now this tests if encrypting then decrypting reveals the same string and whether the stretched credential hashing works.
+
+## Designing for the Future
+
+The future of this app/platform involves storing encrypted images/videos and any other file types that users could possibly want to encrypt. However, I think there are some important security milestones to hit before any of that happens:
+
+There needs to be a way to make sure that the binary on the App Store is the binary that's here. There needs to be some assurance that the code you have on your phone is actually behaving exactly like the code behaves inside of this repository. I have no idea how to ensure this.
+
+There need to be Unit Tests that prove extra data is not sent over an internet connection anywhere as well. I'm storing the plaintext password in the OCSession object, but there is no guarantee through Unit Tests or otherwise that it stays put and never leaves the device. I know it doesn't in the code I've written, and I can tell you that it doesn't, but there needs to be a way to prove it. I don't know how to do that right now.
+
+## License
+
+License coming soon...
