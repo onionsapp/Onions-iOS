@@ -53,7 +53,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
         <view contentMode="scaleToFill" id="qbO-bb-8wM" userLabel="About Content">
-            <rect key="frame" x="0.0" y="0.0" width="280" height="1221"/>
+            <rect key="frame" x="0.0" y="0.0" width="280" height="1192"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What is Onions?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3eS-hY-ftL">
@@ -81,7 +81,7 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1cO-HF-2AU">
                     <rect key="frame" x="10" y="269" width="260" height="315"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <mutableString key="text">Onions uses a couple different methods to keep your data secure. From the server, your password is encrypted using BCrypt (http://en.wikipedia.org/wiki/Bcrypt), and your plaintext username is never stored, period. Both your username and password are SHA-256 hashed recursively for 15,000 rounds before being sent to the server for authentication. On the iPhone, AES-CBC-256 (with HMAC) encryption is employed to turn your various onions into gobbledy-gook before they're sent to the server over an SSL connection.</mutableString>
+                    <string key="text">Onions uses a couple different methods to keep your data secure. From the server, your password is encrypted using BCrypt (http://en.wikipedia.org/wiki/Bcrypt), and your plaintext username is never stored, period. Both your username and password are SHA-256 hashed recursively for 15,000 rounds before being sent to the server for authentication. On the iPhone, AES-CBC-256 (with HMAC) encryption is employed to turn your various onions into gobbledy-gook before they're sent to the server over an SSL connection.</string>
                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
                     <color key="textColor" red="0.28042204479999999" green="0.28042204479999999" blue="0.28042204479999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -109,15 +109,15 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gFb-as-mk1">
-                    <rect key="frame" x="10" y="924" width="260" height="218"/>
+                    <rect key="frame" x="10" y="924" width="260" height="195"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">Private information storage in the cloud should be free. With this in mind, we are offering 10 Onions for free with each free account. However, if you'd like more or want to help support the cause, you can purchase the Pro upgrade for a lifetime charge of $9.99 per account. This allows an unlimited amount of Onions to be stored, and any other future features we add for free.</string>
+                    <string key="text">Private information storage in the cloud should be free. With this in mind, we are offering 10 Onions with each free account. However, if you'd like more or want to help support the cause, you can purchase the Pro upgrade for a lifetime charge of $9.99 per account. This allows an unlimited amount of Onions to be stored, and any other future features we add.</string>
                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
                     <color key="textColor" red="0.28042204479999999" green="0.28042204479999999" blue="0.28042204479999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thanks for using Onions!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z3T-wH-e1H">
-                    <rect key="frame" x="10" y="1165" width="260" height="30"/>
+                    <rect key="frame" x="10" y="1139" width="260" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                     <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
