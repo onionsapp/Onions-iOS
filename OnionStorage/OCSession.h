@@ -11,12 +11,13 @@
 #import "Onion.h"
 #import "SatelliteStore.h"
 
-@interface OCSession : NSObject <SatelliteStoreDelegate>
+#define kProProductID @"com.subvertllc.Onions.Pro"
+
+@interface OCSession : NSObject
 
 // Properties
 @property (nonatomic, retain) NSString *Password;
 @property (nonatomic, retain) NSMutableArray *OnionData;
-@property (nonatomic, retain) SKProduct *ProProduct;
 
 // Main Session
 + (OCSession*)mainSession;

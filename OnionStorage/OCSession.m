@@ -24,7 +24,7 @@ static OCSession * _mainSession = nil;
 }
 
 
-+(id)alloc {
++ (id)alloc {
 	@synchronized([OCSession class]) {
 		NSAssert(_mainSession == nil, @"Attempted to allocate a second instance of a singleton.");
 		_mainSession = [super alloc];
@@ -34,15 +34,20 @@ static OCSession * _mainSession = nil;
 }
 
 
--(id)init {
+- (id)init {
 	if (self = [super init]) {
+        // Init Array
         self.OnionData = [NSMutableArray array];
-        [[SatelliteStore mainStore] getProductsWithCompletion:^(NSArray *products) {
-            if (products && products.count > 0) {
-                self.ProProduct = products[0];
-            }
+        
+        // Satellite Store: Set Identifiers
+        [[SatelliteStore shoppingCenter] setProductIdentifiers:@[kProProductID]];
+        
+        // Satellite Store: Get Prodcuts
+        [[SatelliteStore shoppingCenter] getProductsWithCompletion:^(BOOL success) {
+            //
         }];
 	}
+    
 	return self;
 }
 
@@ -142,7 +147,7 @@ static OCSession * _mainSession = nil;
     }
     
     // Use SatelliteStore to buy the product
-    [[SatelliteStore mainStore] purchaseProduct:[[OCSession mainSession] ProProduct] withCompletion:^(BOOL purchased) {
+    [[SatelliteStore shoppingCenter] purchaseProductWithIdentifier:kProProductID withCompletion:^(BOOL purchased) {
         if (purchased) {
             [[PFUser currentUser] setValue:@YES forKey:@"Pro"];
             [[PFUser currentUser] saveInBackground];
@@ -177,8 +182,6 @@ static OCSession * _mainSession = nil;
 
 #pragma mark - Login
 + (void)loginWithUsername:(NSString *)username password:(NSString *)password completion:(void (^)(BOOL))completion {
-    NSLog(@"%@", [OCSession mainSession].ProProduct.price);
-    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         [PFUser logInWithUsernameInBackground:[OCSecurity stretchedCredentialString:username] password:[OCSecurity stretchedCredentialString:[password stringByAppendingString:username]] block:^(PFUser *user, NSError *error) {
             if (user) {
