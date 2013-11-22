@@ -59,6 +59,17 @@
     [self testInequalityOfObject:shaOnceString andObject:stretchedShaString fromMethod:__PRETTY_FUNCTION__];
 }
 
+- (void)testStretchedCredentialIsTheSame {
+    // Credential 1
+    NSString *credential1 = [OCSecurity stretchedCredentialString:@"HelloWorld"];
+    
+    // Credential 2
+    NSString *credential2 = [OCSecurity stretchedCredentialString:@"HelloWorld"];
+    
+    // Test equality
+    [self testEqualityOfObject:credential1 andObject:credential2 fromMethod:__PRETTY_FUNCTION__];
+}
+
 - (void)testEncryptedStringIsDifferent {
     // Test String
     NSString *testString = @"HelloWorld";
@@ -88,7 +99,7 @@
     // Drop Data
     [OCSession dropData];
     
-    // Test Password is Nil
+    // Test Password is nil
     [self testEqualityOfObject:[OCSession Password] andObject:nil fromMethod:__PRETTY_FUNCTION__];
     
     // Test Onions is nil
