@@ -13,6 +13,15 @@
 
 @interface OCAboutViewController ()
 
+// IBOutlets
+@property (weak, nonatomic) IBOutlet UIView *aboutContainer;
+@property (weak, nonatomic) IBOutlet UIScrollView *aboutScrollView;
+@property (strong, nonatomic) IBOutlet UIView *aboutContentView;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+
+// IBActions
+- (IBAction)didSelectBack:(id)sender;
+
 @end
 
 @implementation OCAboutViewController
@@ -51,9 +60,7 @@
     
     // Set hidden initiallly
     for (UIView *subview in self.view.subviews) {
-        if (subview != self.backgroundImageView) {
-            subview.alpha = 0;
-        }
+        subview.alpha = 0;
     }
 }
 
@@ -78,9 +85,7 @@
 - (void)animateVCLeavingWithCompletion:(void (^)(void))completion {
     [UIView animateWithDuration:0.3 animations:^{
         for (UIView *subview in self.view.subviews) {
-            if (subview != self.backgroundImageView) {
-                subview.alpha = 0;
-            }
+            subview.alpha = 0;
         }
     } completion:^(BOOL fin){
         completion();

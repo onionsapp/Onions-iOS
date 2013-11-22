@@ -21,6 +21,18 @@
 
 @interface OCNewAccountViewController ()
 
+// IBOutlets
+@property (weak, nonatomic) IBOutlet UITextField *userTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *rePasswordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
+@property (weak, nonatomic) IBOutlet UIView *registerContainer;
+
+// Methods
+- (IBAction)didSelectRegisterButton:(id)sender;
+- (IBAction)didSelectBack:(id)sender;
+- (IBAction)didSelectHideAllTextFields:(id)sender;
+
 @end
 
 @implementation OCNewAccountViewController
@@ -60,9 +72,7 @@
     
     // Set hidden initiallly
     for (UIView *subview in self.view.subviews) {
-        if (subview != self.backgroundImageView) {
-            subview.alpha = 0;
-        }
+        subview.alpha = 0;
     }
 }
 
@@ -85,9 +95,7 @@
 - (void)animateVCLeavingWithCompletion:(void (^)(void))completion {
     [UIView animateWithDuration:0.3 animations:^{
         for (UIView *subview in self.view.subviews) {
-            if (subview != self.backgroundImageView) {
-                subview.alpha = 0;
-            }
+            subview.alpha = 0;
         }
     } completion:^(BOOL fin){
         completion();

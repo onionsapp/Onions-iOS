@@ -23,6 +23,19 @@
 
 @interface OCViewController ()
 
+// IBOutlet Properties
+@property (weak, nonatomic) IBOutlet UITextField *userTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIView *loginContainer;
+@property (weak, nonatomic) IBOutlet UIView *mainContainer;
+
+// IBAction
+- (IBAction)didClickLogin:(id)sender;
+- (IBAction)didClickNewAccount:(id)sender;
+- (IBAction)didClickAbout:(id)sender;
+- (IBAction)didClickHideTextFields:(id)sender;
+
 @end
 
 @implementation OCViewController

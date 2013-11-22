@@ -15,6 +15,20 @@
 
 @interface OCSettingsViewController ()
 
+// Outlets
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
+@property (weak, nonatomic) IBOutlet UIButton *purchaseProButton;
+@property (weak, nonatomic) IBOutlet UIView *mainContainer;
+
+// Data Objects
+@property (nonatomic, retain) NSString *Username;
+
+// Actions
+- (IBAction)didSelectBack:(id)sender;
+- (IBAction)didSelectPurchasePro:(id)sender;
+- (IBAction)didSelectDeleteAccount:(id)sender;
+
 @end
 
 @implementation OCSettingsViewController
@@ -71,9 +85,7 @@
     
     // Hide initially
     for (UIView *subview in self.view.subviews) {
-        if (subview != self.backgroundImageView) {
-            subview.alpha = 0;
-        }
+        subview.alpha = 0;
     }
 }
 
@@ -90,9 +102,7 @@
 - (void)animateVCLeavingWithCompletion:(void (^)(void))completion {
     [UIView animateWithDuration:0.3 animations:^{
         for (UIView *subview in self.view.subviews) {
-            if (subview != self.backgroundImageView) {
-                subview.alpha = 0;
-            }
+            subview.alpha = 0;
         }
     } completion:^(BOOL fin){
         completion();
