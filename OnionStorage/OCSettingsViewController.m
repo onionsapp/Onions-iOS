@@ -23,6 +23,7 @@
 
 // Data Objects
 @property (nonatomic, retain) NSString *Username;
+@property (nonatomic, retain) SKProduct *ProProduct;
 
 // Actions
 - (IBAction)didSelectBack:(id)sender;

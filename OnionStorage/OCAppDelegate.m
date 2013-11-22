@@ -29,16 +29,8 @@
     [Onion registerSubclass];
     [Parse setApplicationId:PARSE_APP_ID clientKey:PARSE_CLIENT_ID];
     
-    // Register for PRO purchase
-    [PFPurchase addObserverForProduct:@"com.subvertllc.Onions.Pro" block:^(SKPaymentTransaction *transaction) {
-        if (transaction) {
-            if ([PFUser currentUser]) {
-                [[PFUser currentUser] setValue:@YES forKey:@"Pro"];
-                [[PFUser currentUser] setValue:transaction.transactionIdentifier forKey:@"ProReceipt"];
-                [[PFUser currentUser] saveInBackground];
-            }
-        }
-    }];
+    // Make sure OCSession is set up and clear
+    [OCSession dropData];
     
     // Set up ViewDeck
     self.mainNavigationController = [[UINavigationController alloc] initWithRootViewController:[[OCViewController alloc] initWithNibName:@"OCViewController" bundle:nil]];

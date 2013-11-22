@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 #import "Onion.h"
+#import "SatelliteStore.h"
 
-@interface OCSession : NSObject
+@interface OCSession : NSObject <SatelliteStoreDelegate>
 
 // Properties
 @property (nonatomic, retain) NSString *Password;
 @property (nonatomic, retain) NSMutableArray *OnionData;
+@property (nonatomic, retain) SKProduct *ProProduct;
 
 // Main Session
 + (OCSession*)mainSession;

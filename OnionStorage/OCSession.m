@@ -37,6 +37,11 @@ static OCSession * _mainSession = nil;
 -(id)init {
 	if (self = [super init]) {
         self.OnionData = [NSMutableArray array];
+        [[SatelliteStore mainStore] getProductsWithCompletion:^(NSArray *products) {
+            if (products && products.count > 0) {
+                self.ProProduct = products[0];
+            }
+        }];
 	}
 	return self;
 }
@@ -136,17 +141,29 @@ static OCSession * _mainSession = nil;
         return;
     }
     
-    // Purchase the Product
-    [PFPurchase buyProduct:@"com.subvertllc.Onions.Pro" block:^(NSError *error) {
-        if (!error) {
+    // Use SatelliteStore to buy the product
+    [[SatelliteStore mainStore] purchaseProduct:[[OCSession mainSession] ProProduct] withCompletion:^(BOOL purchased) {
+        if (purchased) {
             [[PFUser currentUser] setValue:@YES forKey:@"Pro"];
             [[PFUser currentUser] saveInBackground];
         }
         
-        if (completion) {
-            completion(error ? NO : YES);
-        }
+        completion(purchased);
     }];
+    
+    // Purchase the Product
+    /*
+     [PFPurchase buyProduct:@"com.subvertllc.Onions.Pro" block:^(NSError *error) {
+     if (!error) {
+     [[PFUser currentUser] setValue:@YES forKey:@"Pro"];
+     [[PFUser currentUser] saveInBackground];
+     }
+     
+     if (completion) {
+     completion(error ? NO : YES);
+     }
+     }];
+     */
 }
 
 /*
@@ -160,6 +177,8 @@ static OCSession * _mainSession = nil;
 
 #pragma mark - Login
 + (void)loginWithUsername:(NSString *)username password:(NSString *)password completion:(void (^)(BOOL))completion {
+    NSLog(@"%@", [OCSession mainSession].ProProduct.price);
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         [PFUser logInWithUsernameInBackground:[OCSecurity stretchedCredentialString:username] password:[OCSecurity stretchedCredentialString:[password stringByAppendingString:username]] block:^(PFUser *user, NSError *error) {
             if (user) {

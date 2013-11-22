@@ -29,6 +29,7 @@
 		C039E19217B9D6410052007A /* icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = C039E18E17B9D6410052007A /* icon_58.png */; };
 		C039E19317B9D6410052007A /* icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = C039E18F17B9D6410052007A /* icon_80.png */; };
 		C039E19417B9D6410052007A /* icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = C039E19017B9D6410052007A /* icon_120.png */; };
+		C04CDD61183FB3A70076BAB8 /* SatelliteStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C04CDD60183FB3A70076BAB8 /* SatelliteStore.m */; };
 		C057668417B8876500697D8A /* icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = C057668017B8876500697D8A /* icon_72.png */; };
 		C057668517B8876500697D8A /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = C057668117B8876500697D8A /* icon_114.png */; };
 		C057668617B8876500697D8A /* icon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = C057668217B8876500697D8A /* icon_144.png */; };
@@ -117,6 +118,8 @@
 		C039E18E17B9D6410052007A /* icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_58.png; sourceTree = "<group>"; };
 		C039E18F17B9D6410052007A /* icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_80.png; sourceTree = "<group>"; };
 		C039E19017B9D6410052007A /* icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120.png; sourceTree = "<group>"; };
+		C04CDD5F183FB3A70076BAB8 /* SatelliteStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatelliteStore.h; sourceTree = "<group>"; };
+		C04CDD60183FB3A70076BAB8 /* SatelliteStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SatelliteStore.m; sourceTree = "<group>"; };
 		C057668017B8876500697D8A /* icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_72.png; sourceTree = "<group>"; };
 		C057668117B8876500697D8A /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
 		C057668217B8876500697D8A /* icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_144.png; sourceTree = "<group>"; };
@@ -474,6 +477,8 @@
 		C0EE70BB17B8182E00C97F0B /* Helpers & Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C04CDD5F183FB3A70076BAB8 /* SatelliteStore.h */,
+				C04CDD60183FB3A70076BAB8 /* SatelliteStore.m */,
 				C0EE70BC17B8184200C97F0B /* UIColor+Colours.h */,
 				C0EE70BD17B8184200C97F0B /* UIColor+Colours.m */,
 				C0EE70BE17B8184200C97F0B /* UIHelpers.h */,
@@ -645,6 +650,7 @@
 				C0A8DF3E182FFCAF004D28A3 /* RNEncryptor.m in Sources */,
 				C0EE70AF17B8145C00C97F0B /* SSKeychainQuery.m in Sources */,
 				C032B7D517C06A0000BB7C2E /* OCAboutViewController.m in Sources */,
+				C04CDD61183FB3A70076BAB8 /* SatelliteStore.m in Sources */,
 				C0EE70B117B8145C00C97F0B /* OCSecurity.m in Sources */,
 				C0A8DF3D182FFCAF004D28A3 /* RNDecryptor.m in Sources */,
 				C0EE70C317B8184200C97F0B /* UIColor+Colours.m in Sources */,
