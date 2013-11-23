@@ -50,7 +50,6 @@ static SatelliteStore * _shoppingCenter = nil;
 - (id)init {
 	if (self = [super init]) {
         [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-        self.Inventory = [NSMutableDictionary dictionary];
 	}
 	return self;
 }
@@ -78,9 +77,9 @@ static SatelliteStore * _shoppingCenter = nil;
 }
 
 #pragma mark - Restore Purchases
-- (void)restorePurchasesWithCompletion:(PurchaseProductCompletion)completion {
+- (void)restorePurchasesWithCompletion:(RestorePurchasesCompletion)completion {
     if (completion) {
-        self.purchaseCompletion = completion;
+        self.restoreCompletion = completion;
         [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
     }
 }
@@ -103,7 +102,7 @@ static SatelliteStore * _shoppingCenter = nil;
             [self purchaseProduct:product];
         }
         else {
-            completion(NO);
+            completion(nil, NO);
         }
     }
 }
@@ -125,10 +124,8 @@ static SatelliteStore * _shoppingCenter = nil;
 
 #pragma mark - Payment Queue
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions {
-    for (SKPaymentTransaction *transaction in transactions)
-    {
-        switch (transaction.transactionState)
-        {
+    for (SKPaymentTransaction *transaction in transactions) {
+        switch (transaction.transactionState) {
             case SKPaymentTransactionStatePurchased:
                 [self completeTransaction:transaction];
                 break;
@@ -149,45 +146,32 @@ static SatelliteStore * _shoppingCenter = nil;
 }
 
 #pragma mark - Payment Notifications
-- (void)finishTransaction:(SKPaymentTransaction *)transaction wasSuccessful:(BOOL)wasSuccessful
-{
+- (void)finishTransaction:(SKPaymentTransaction *)transaction wasSuccessful:(BOOL)wasSuccessful {
     // remove the transaction from the payment queue.
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
     
     // Completion
     if (self.purchaseCompletion) {
-        self.purchaseCompletion(wasSuccessful);
+        self.purchaseCompletion(transaction, wasSuccessful);
     }
 }
 
-- (void)restoreTransaction:(SKPaymentTransaction *)transaction
-{
+- (void)restoreTransaction:(SKPaymentTransaction *)transaction {
     [self finishTransaction:transaction wasSuccessful:YES];
 }
 
-- (void)failedTransaction:(SKPaymentTransaction *)transaction
-{
-    if (transaction.error.code != SKErrorPaymentCancelled)
-    {
-        // error!
-        [self finishTransaction:transaction wasSuccessful:NO];
-    }
-    else
-    {
-        // this is fine, the user just cancelled, so don’t notify
-        [self finishTransaction:transaction wasSuccessful:NO];
-        [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-    }
+- (void)failedTransaction:(SKPaymentTransaction *)transaction {
+    [self finishTransaction:transaction wasSuccessful:NO];
 }
 
-- (void)completeTransaction:(SKPaymentTransaction *)transaction
-{
+- (void)completeTransaction:(SKPaymentTransaction *)transaction {
     [self finishTransaction:transaction wasSuccessful:YES];
 }
 
 
 #pragma mark - Inventory
 - (void)setInventoryWithProducts:(NSArray *)products {
+    self.Inventory = [NSMutableDictionary dictionary];
     [products enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if ([obj isKindOfClass:[SKProduct class]]) {
             [self.Inventory setObject:obj forKey:[(SKProduct *)products[idx] productIdentifier]];
@@ -201,6 +185,10 @@ static SatelliteStore * _shoppingCenter = nil;
     }
     
     return nil;
+}
+
+- (BOOL)inventoryHasProducts {
+    return self.Inventory ? YES : NO;
 }
 
 #pragma mark - Open for Business

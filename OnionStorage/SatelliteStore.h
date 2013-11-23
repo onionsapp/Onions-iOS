@@ -26,16 +26,21 @@
 @class SatelliteStore;
 
 
+// Blocks
 typedef void (^GetProductsCompletion) (BOOL success);
-typedef void (^PurchaseProductCompletion) (BOOL purchased);
+typedef void (^PurchaseProductCompletion) (SKPaymentTransaction *transaction, BOOL success);
+typedef void (^RestorePurchasesCompletion) (BOOL success);
 
-// Class
+
+
 @interface SatelliteStore : NSObject <SKPaymentTransactionObserver,SKProductsRequestDelegate>
 
+// Properties
 @property (nonatomic, strong) SKProductsRequest *ProductsRequest;
 @property (nonatomic, retain) NSMutableDictionary *Inventory;
 @property (nonatomic, retain) NSSet *InventoryIdentifiers;
 @property (nonatomic, strong) PurchaseProductCompletion purchaseCompletion;
+@property (nonatomic, strong) RestorePurchasesCompletion restoreCompletion;
 @property (nonatomic, strong) GetProductsCompletion getProductsCompletion;
 
 
@@ -52,10 +57,11 @@ typedef void (^PurchaseProductCompletion) (BOOL purchased);
 - (void)purchaseProductWithIdentifier:(NSString *)identifier withCompletion:(PurchaseProductCompletion)completion;
 
 // Restore Purchases
-- (void)restorePurchasesWithCompletion:(PurchaseProductCompletion)completion;
+- (void)restorePurchasesWithCompletion:(RestorePurchasesCompletion)completion;
 
 // Inventory
 - (SKProduct *)productFromInventoryWithIdentifier:(NSString *)identifier;
+- (BOOL)inventoryHasProducts;
 
 // Can Make Purchases
 - (BOOL)isOpenForBusiness;

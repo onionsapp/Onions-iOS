@@ -147,13 +147,14 @@ static OCSession * _mainSession = nil;
     }
     
     // Use SatelliteStore to buy the product
-    [[SatelliteStore shoppingCenter] purchaseProductWithIdentifier:kProProductID withCompletion:^(BOOL purchased) {
-        if (purchased) {
+    [[SatelliteStore shoppingCenter] purchaseProductWithIdentifier:kProProductID withCompletion:^(SKPaymentTransaction *transaction, BOOL success) {
+        if (success) {
             [[PFUser currentUser] setValue:@YES forKey:@"Pro"];
+            [[PFUser currentUser] setValue:transaction.transactionIdentifier forKey:@"ProReceipt"];
             [[PFUser currentUser] saveInBackground];
         }
         
-        completion(purchased);
+        completion(success);
     }];
     
     // Purchase the Product
