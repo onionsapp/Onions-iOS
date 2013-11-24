@@ -23,7 +23,7 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="zmf-1m-DGh">
                     <rect key="frame" x="20" y="290" width="280" height="129"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">Your privacy is very important to us. In fact it's our biggest priority. Your credentials are never shared with anyone and they're hashed before they ever hit the server. We recommend creating a strong username and password that is different than any other accounts you use online.</string>
+                    <string key="text">Your privacy is very important to us. In fact it's our biggest priority. Your credentials are never shared with anyone and they're hashed before they ever hit the server. We recommend creating a strong username and password that are different than any other accounts you use online.</string>
                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="16"/>
                     <color key="textColor" white="0.96769046160000005" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
