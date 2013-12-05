@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G40-pP-f7W">
-                    <rect key="frame" x="10" y="406" width="300" height="50"/>
+                    <rect key="frame" x="10" y="331" width="300" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
@@ -35,10 +35,10 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AU7-ml-U5M" userLabel="Container">
-                    <rect key="frame" x="10" y="37" width="300" height="287"/>
+                    <rect key="frame" x="10" y="37" width="300" height="214"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Upgrade to Pro Account" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="Czr-sX-cGi">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Early Adopter!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="Czr-sX-cGi">
                             <rect key="frame" x="10" y="9" width="260" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
@@ -46,30 +46,18 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="RKz-Qo-1cg">
-                            <rect key="frame" x="10" y="42" width="280" height="176"/>
+                            <rect key="frame" x="10" y="42" width="280" height="161"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <string key="text">The free version of the app allows you to create 10 free Onions. However, if you need more, you can buy a lifetime upgrade for $9.99. The upgrade gives you an unlimited amount of Onions, as well as any future features that get added to Pro (pictures are coming soon). This upgrade is tied to your account, and not just this phone, so you'll always be Pro.</string>
+                            <string key="text">Thanks for being an early adopter of the Onions app. You get an unlimited amount of Onions you can create for free. In the future, there will be a Pro version upgrade that allows only 10 for free accounts. Thanks for downloading and showing support right now, and tell all of your friends!</string>
                             <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
                             <color key="textColor" red="0.28042204479999999" green="0.28042204479999999" blue="0.28042204479999999" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN7-NA-q2y">
-                            <rect key="frame" x="10" y="231" width="280" height="41"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
-                            <state key="normal" title="PURCHASE PRO FOR $9.99">
-                                <color key="titleColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="didSelectPurchasePro:" destination="-1" eventType="touchUpInside" id="7nG-6e-h3U"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ED-Xr-QdT">
-                    <rect key="frame" x="10" y="342" width="300" height="50"/>
+                    <rect key="frame" x="10" y="267" width="300" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
@@ -89,5 +77,32 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Upgrade to Pro Account" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" id="tzf-zH-0iw">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+            <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="highlightedColor"/>
+        </label>
+        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" id="JEJ-ko-Tne">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="176"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <string key="text">The free version of the app allows you to create 10 free Onions. However, if you need more, you can buy a lifetime upgrade for $9.99. The upgrade gives you an unlimited amount of Onions, as well as any future features that get added to Pro (pictures are coming soon). This upgrade is tied to your account, and not just this phone, so you'll always be Pro.</string>
+            <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
+            <color key="textColor" red="0.28042204479999999" green="0.28042204479999999" blue="0.28042204479999999" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="highlightedColor"/>
+        </label>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nN7-NA-q2y">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="41"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
+            <state key="normal" title="PURCHASE PRO FOR $9.99">
+                <color key="titleColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <connections>
+                <action selector="didSelectPurchasePro:" destination="-1" eventType="touchUpInside" id="7nG-6e-h3U"/>
+            </connections>
+        </button>
     </objects>
 </document>

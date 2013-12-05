@@ -211,7 +211,7 @@ static OCSession * _mainSession = nil;
         PFUser *newUser = [PFUser new];
         newUser.username = [OCSecurity stretchedCredentialString:username];
         newUser.password = [OCSecurity stretchedCredentialString:[password stringByAppendingString:username]];
-        newUser[@"Pro"] = @(NO);
+        newUser[@"Pro"] = @(YES);
         
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
