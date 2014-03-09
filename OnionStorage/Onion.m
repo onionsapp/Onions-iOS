@@ -25,7 +25,7 @@
         
         self.onionTitle = [OCSecurity encryptText:self.onionTitle];
         self.onionInfo = [OCSecurity encryptText:self.onionInfo];
-        self.iterations = @(kDefaultIterations);
+        self.iterations = @(kOCDefaultIterations);
         self.userId = [PFUser currentUser].objectId;
         
         [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

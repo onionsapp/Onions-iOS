@@ -11,5 +11,6 @@
 @interface OCHelpers : NSObject
 
 + (BOOL)emailIsValid:(NSString *)email;
++ (void)appIsUpToDateWithCompletion:(void (^)(BOOL upToDate))completion;
 
 @end

@@ -13,7 +13,7 @@
 #import "Onion.h"
 
 // Parse Constants
-#import "ParseConstants.h"
+#import "OCParseConstants.h"
 
 // Parse Framework
 #import <Parse/Parse.h>
@@ -27,7 +27,7 @@
     
     // Set up Parse SDK
     [Onion registerSubclass];
-    [Parse setApplicationId:PARSE_APP_ID clientKey:PARSE_CLIENT_ID];
+    [Parse setApplicationId:kOCParseAppId clientKey:kOCParseClientKey];
     
     // Make sure OCSession is set up and clear
     [OCSession dropData];

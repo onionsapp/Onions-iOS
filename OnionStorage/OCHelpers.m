@@ -16,4 +16,26 @@
     return [predicate evaluateWithObject:email];
 }
 
++ (void)appIsUpToDateWithCompletion:(void (^)(BOOL upToDate))completion {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        BOOL versionsMatch = NO;
+        NSError *error;
+        NSHTTPURLResponse *response;
+        NSData *responseData = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://itunes.apple.com/en/lookup?bundleId=com.subvertllc.onions"]] returningResponse:&response error:&error];
+        
+        if (responseData) {
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
+            if (json[@"results"][0][@"version"]) {
+                NSDictionary *infoDict = [[NSBundle mainBundle] infoDictionary];
+                versionsMatch = [json[@"results"][0][@"version"] isEqualToString:infoDict[@"CFBundleShortVersionString"]];
+            }
+        }
+        
+        // Callback
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(versionsMatch);
+        });
+    });
+}
+
 @end

@@ -21,7 +21,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Parse/Parse.h>
 
-@interface OCViewController ()
+static NSString * const kOCAppStoreURLPath = @"https://itunes.apple.com/us/app/onions/id687296481?ls=1&mt=8";
+
+@interface OCViewController () <UIAlertViewDelegate>
 
 // IBOutlet Properties
 @property (weak, nonatomic) IBOutlet UITextField *userTextField;
@@ -50,6 +52,14 @@
     
     // Set UI
     [self buildUI];
+    
+    // Check App is up to date
+    [OCHelpers appIsUpToDateWithCompletion:^(BOOL upToDate) {
+        if (!upToDate) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"New Version" message:@"A new version of Onions is available. It is highly recommended that you update to the new version as continuing to run the old version may result in security compromises." delegate:self cancelButtonTitle:@"Not Now" otherButtonTitles:@"Update", nil];
+            [alert show];
+        }
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -186,6 +196,15 @@
     } completion:^(BOOL fin){
         completion();
     }];
+}
+
+
+#pragma mark - AlertView Delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        // Clicked "Update" on an out-of-date version alert
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kOCAppStoreURLPath]];
+    }
 }
 
 @end

@@ -11,7 +11,34 @@
 #import "RNDecryptor.h"
 #import "RNCryptor.h"
 
-#define kStretchedShaIterations 15000
+#define kOCStretchedShaIterations 15000
+#define kOCDefaultIterations 10000
+
+static const RNCryptorSettings kOCCryptorAES256Settings = {
+    .algorithm = kCCAlgorithmAES128,
+    .blockSize = kCCBlockSizeAES128,
+    .IVSize = kCCBlockSizeAES128,
+    .options = kCCOptionPKCS7Padding,
+    .HMACAlgorithm = kCCHmacAlgSHA256,
+    .HMACLength = CC_SHA256_DIGEST_LENGTH,
+    
+    .keySettings = {
+        .keySize = kCCKeySizeAES256,
+        .saltSize = 8,
+        .PBKDFAlgorithm = kCCPBKDF2,
+        .PRF = kCCPRFHmacAlgSHA512,
+        .rounds = kOCDefaultIterations
+    },
+    
+    .HMACKeySettings = {
+        .keySize = kCCKeySizeAES256,
+        .saltSize = 8,
+        .PBKDFAlgorithm = kCCPBKDF2,
+        .PRF = kCCPRFHmacAlgSHA512,
+        .rounds = kOCDefaultIterations
+    }
+};
+
 
 @interface OCSecurity : NSObject
 

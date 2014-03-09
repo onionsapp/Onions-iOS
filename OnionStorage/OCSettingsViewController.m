@@ -118,7 +118,7 @@
 
 - (IBAction)didSelectPurchasePro:(id)sender {
     [self enablePurchaseButton:NO];
-    [self purchasePro];
+    //[self purchasePro];
 }
 
 - (IBAction)didSelectDeleteAccount:(id)sender {
@@ -146,6 +146,7 @@
     }
 }
 
+/*
 - (void)purchasePro {
     if (![OCSession userIsPro]) {
         // Buy It
@@ -169,6 +170,7 @@
         [[[UIAlertView alloc] initWithTitle:@"Already PRO!" message:@"It seems you've already purchased Pro. I hope you like it." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     }
 }
+*/
 
 - (void)enablePurchaseButton:(BOOL)enable {
     self.mainContainer.alpha = enable ? 1.0 : 0.25;

@@ -8,7 +8,7 @@
 
 #import "UIHelpers.h"
 #import <QuartzCore/QuartzCore.h>
-#import "UIColor+Colours.h"
+#import <Colours.h>
 
 @implementation UIHelpers
 

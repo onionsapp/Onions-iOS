@@ -11,6 +11,17 @@
 
 @implementation OCSecurity
 
+
+#pragma mark - RNCryptorSettings
++ (RNCryptorSettings)onionSettingsWithIterations:(int)iterations {
+    return ({
+        RNCryptorSettings settings = kOCCryptorAES256Settings;
+        settings.keySettings.rounds = iterations;
+        settings.HMACKeySettings.rounds = iterations;
+        settings;
+    });
+}
+
 #pragma mark - Parse Onions
 + (NSString *)encryptText:(NSString *)text {
     if (![OCSession Password]) {
@@ -18,7 +29,7 @@
     }
     
     NSError *error;
-    NSData *encryptedData = [RNEncryptor encryptData:[text dataUsingEncoding:NSUTF8StringEncoding] withSettings:kRNCryptorAES256Settings password:[OCSession Password] error:&error];
+    NSData *encryptedData = [RNEncryptor encryptData:[text dataUsingEncoding:NSUTF8StringEncoding] withSettings:[OCSecurity onionSettingsWithIterations:kOCDefaultIterations] password:[OCSession Password] error:&error];
     if (!error) {
         return [encryptedData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     }
@@ -32,7 +43,7 @@
     }
     
     NSError *error;
-    NSData *decryptedData = [RNDecryptor decryptData:[[NSData alloc] initWithBase64EncodedString:text options:NSDataBase64DecodingIgnoreUnknownCharacters] iterations:[iterations intValue] password:[OCSession Password] error:&error];
+    NSData *decryptedData = [RNDecryptor decryptData:[[NSData alloc] initWithBase64EncodedString:text options:NSDataBase64DecodingIgnoreUnknownCharacters] withSettings:[OCSecurity onionSettingsWithIterations:iterations.intValue] password:[OCSession Password] error:&error];
     if (!error) {
         return [[NSString alloc] initWithData:decryptedData encoding:NSUTF8StringEncoding];
     }
@@ -41,7 +52,7 @@
 }
 
 + (NSString *)stretchedCredentialString:(NSString *)credential {
-    return [[OCSecurity stretchedSHA256String:credential withIterations:kStretchedShaIterations] base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    return [[OCSecurity stretchedSHA256String:credential withIterations:kOCStretchedShaIterations] base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     
 }
 
@@ -56,8 +67,7 @@
 
 + (NSData *)sha256:(NSData *)dataIn {
     NSMutableData *macOut = [NSMutableData dataWithLength:CC_SHA256_DIGEST_LENGTH];
-    CC_SHA256(dataIn.bytes, dataIn.length, macOut.mutableBytes);
-    
+    CC_SHA256(dataIn.bytes, (int)dataIn.length, macOut.mutableBytes);
     return macOut;
 }
 

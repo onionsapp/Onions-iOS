@@ -18,4 +18,11 @@ DerivedData
 .idea/
 *.xcuserstate
 
-OnionStorage/ParseConstants.h
+# Cocoapods
+*.pbxproj -crlf -diff -merge
+Podfile.lock
+Pods/*
+
+# Parse Keys
+OnionStorage/OCParseConstants.h
+OnionStorage/OCParseConstants.h

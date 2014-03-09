@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B63E1D5218CC1FF80007C343 /* OCSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = B63E1D5118CC1FF80007C343 /* OCSecurity.m */; };
 		C02CBD06183B9697003C0C94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EE708417B8142A00C97F0B /* Foundation.framework */; };
 		C02CBD07183B9697003C0C94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EE708217B8142A00C97F0B /* UIKit.framework */; };
 		C02CBD0D183B9697003C0C94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02CBD0B183B9697003C0C94 /* InfoPlist.strings */; };
 		C02CBD0F183B9697003C0C94 /* OnionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CBD0E183B9697003C0C94 /* OnionsTests.m */; };
 		C02CBD18183B97BF003C0C94 /* XCTestCase+OnionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CBD17183B97BF003C0C94 /* XCTestCase+OnionsTestCase.m */; };
-		C02CBD1F183B9D91003C0C94 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02CBD1E183B9D91003C0C94 /* Parse.framework */; };
-		C02CBD20183B9D91003C0C94 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02CBD1E183B9D91003C0C94 /* Parse.framework */; };
 		C02CBD22183B9F1C003C0C94 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02CBD21183B9F1C003C0C94 /* XCTest.framework */; };
 		C032B7C917BE54C400BB7C2E /* OCHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C032B7C817BE54C400BB7C2E /* OCHelpers.m */; };
 		C032B7D517C06A0000BB7C2E /* OCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C032B7D317C06A0000BB7C2E /* OCAboutViewController.m */; };
@@ -29,7 +28,6 @@
 		C039E19217B9D6410052007A /* icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = C039E18E17B9D6410052007A /* icon_58.png */; };
 		C039E19317B9D6410052007A /* icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = C039E18F17B9D6410052007A /* icon_80.png */; };
 		C039E19417B9D6410052007A /* icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = C039E19017B9D6410052007A /* icon_120.png */; };
-		C04CDD61183FB3A70076BAB8 /* SatelliteStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C04CDD60183FB3A70076BAB8 /* SatelliteStore.m */; };
 		C057668417B8876500697D8A /* icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = C057668017B8876500697D8A /* icon_72.png */; };
 		C057668517B8876500697D8A /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = C057668117B8876500697D8A /* icon_114.png */; };
 		C057668617B8876500697D8A /* icon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = C057668217B8876500697D8A /* icon_144.png */; };
@@ -44,13 +42,6 @@
 		C0A8DF27182FF184004D28A3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A8DF26182FF183004D28A3 /* CoreLocation.framework */; };
 		C0A8DF29182FF1A6004D28A3 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A8DF28182FF1A6004D28A3 /* libz.1.1.3.dylib */; };
 		C0A8DF2B182FF1C4004D28A3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A8DF2A182FF1C4004D28A3 /* CFNetwork.framework */; };
-		C0A8DF3C182FFCAF004D28A3 /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A8DF2E182FFCAF004D28A3 /* RNCryptor.m */; };
-		C0A8DF3D182FFCAF004D28A3 /* RNDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A8DF30182FFCAF004D28A3 /* RNDecryptor.m */; };
-		C0A8DF3E182FFCAF004D28A3 /* RNEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A8DF32182FFCAF004D28A3 /* RNEncryptor.m */; };
-		C0A8DF3F182FFCAF004D28A3 /* RNOpenSSLCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A8DF34182FFCAF004D28A3 /* RNOpenSSLCryptor.m */; };
-		C0A8DF40182FFCAF004D28A3 /* RNOpenSSLDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A8DF35182FFCAF004D28A3 /* RNOpenSSLDecryptor.m */; };
-		C0A8DF41182FFCAF004D28A3 /* RNOpenSSLEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A8DF38182FFCAF004D28A3 /* RNOpenSSLEncryptor.m */; };
-		C0A8DF42182FFCAF004D28A3 /* RNCryptorEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A8DF3A182FFCAF004D28A3 /* RNCryptorEngine.m */; };
 		C0ABF5D21835B05100A0E51F /* OCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ABF5D01835B05100A0E51F /* OCSettingsViewController.m */; };
 		C0ABF5D31835B05100A0E51F /* OCSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0ABF5D11835B05100A0E51F /* OCSettingsViewController.xib */; };
 		C0ABF5D51835BD4000A0E51F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0ABF5D41835BD4000A0E51F /* StoreKit.framework */; };
@@ -66,16 +57,13 @@
 		C0EE709917B8142A00C97F0B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0EE709817B8142A00C97F0B /* Default-568h@2x.png */; };
 		C0EE709C17B8142A00C97F0B /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE709B17B8142A00C97F0B /* OCViewController.m */; };
 		C0EE709F17B8142A00C97F0B /* OCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0EE709D17B8142A00C97F0B /* OCViewController.xib */; };
-		C0EE70AD17B8145C00C97F0B /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70A717B8145C00C97F0B /* SSKeychain.m */; };
-		C0EE70AF17B8145C00C97F0B /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70A917B8145C00C97F0B /* SSKeychainQuery.m */; };
-		C0EE70B117B8145C00C97F0B /* OCSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70AB17B8145C00C97F0B /* OCSecurity.m */; };
 		C0EE70B317B8146A00C97F0B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EE70B217B8146A00C97F0B /* Security.framework */; };
-		C0EE70C317B8184200C97F0B /* UIColor+Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70BD17B8184200C97F0B /* UIColor+Colours.m */; };
 		C0EE70C517B8184200C97F0B /* UIHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70BF17B8184200C97F0B /* UIHelpers.m */; };
 		C0EE70C717B8184200C97F0B /* NSDate+PrettyTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70C117B8184200C97F0B /* NSDate+PrettyTimestamp.m */; };
 		C0EE70C917B8184B00C97F0B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EE70C817B8184B00C97F0B /* QuartzCore.framework */; };
 		C0EE70D717B820FD00C97F0B /* OCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70D517B820FD00C97F0B /* OCSession.m */; };
 		C0EE70DC17B8222900C97F0B /* Onion.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70DA17B8222900C97F0B /* Onion.m */; };
+		C5CAA2A40F3442B38BC6F328 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE55F11AF374488CA4085AA8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +77,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE55F11AF374488CA4085AA8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B63E1D4F18CC1E270007C343 /* OCParseConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCParseConstants.h; sourceTree = "<group>"; };
+		B63E1D5018CC1FF80007C343 /* OCSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSecurity.h; sourceTree = "<group>"; };
+		B63E1D5118CC1FF80007C343 /* OCSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSecurity.m; sourceTree = "<group>"; };
 		C02CBD03183B9697003C0C94 /* OnionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02CBD04183B9697003C0C94 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C02CBD0A183B9697003C0C94 /* OnionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OnionsTests-Info.plist"; sourceTree = "<group>"; };
@@ -97,14 +89,12 @@
 		C02CBD10183B9697003C0C94 /* OnionsTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnionsTests-Prefix.pch"; sourceTree = "<group>"; };
 		C02CBD16183B97BF003C0C94 /* XCTestCase+OnionsTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+OnionsTestCase.h"; sourceTree = "<group>"; };
 		C02CBD17183B97BF003C0C94 /* XCTestCase+OnionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+OnionsTestCase.m"; sourceTree = "<group>"; };
-		C02CBD1E183B9D91003C0C94 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C02CBD21183B9F1C003C0C94 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C032B7C717BE54C400BB7C2E /* OCHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHelpers.h; sourceTree = "<group>"; };
 		C032B7C817BE54C400BB7C2E /* OCHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCHelpers.m; sourceTree = "<group>"; };
 		C032B7D217C06A0000BB7C2E /* OCAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAboutViewController.h; sourceTree = "<group>"; };
 		C032B7D317C06A0000BB7C2E /* OCAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAboutViewController.m; sourceTree = "<group>"; };
 		C032B7D417C06A0000BB7C2E /* OCAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCAboutViewController.xib; sourceTree = "<group>"; };
-		C033F0C618350D00000110FC /* ParseConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseConstants.h; sourceTree = "<group>"; };
 		C039E17A17B99E4C0052007A /* OCOnionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = OCOnionCell.h; sourceTree = "<group>"; };
 		C039E17B17B99E4C0052007A /* OCOnionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCOnionCell.m; sourceTree = "<group>"; };
 		C039E17E17B99E5C0052007A /* OCOnionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCOnionCell.xib; sourceTree = "<group>"; };
@@ -118,8 +108,6 @@
 		C039E18E17B9D6410052007A /* icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_58.png; sourceTree = "<group>"; };
 		C039E18F17B9D6410052007A /* icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_80.png; sourceTree = "<group>"; };
 		C039E19017B9D6410052007A /* icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120.png; sourceTree = "<group>"; };
-		C04CDD5F183FB3A70076BAB8 /* SatelliteStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SatelliteStore.h; sourceTree = "<group>"; };
-		C04CDD60183FB3A70076BAB8 /* SatelliteStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SatelliteStore.m; sourceTree = "<group>"; };
 		C057668017B8876500697D8A /* icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_72.png; sourceTree = "<group>"; };
 		C057668117B8876500697D8A /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
 		C057668217B8876500697D8A /* icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_144.png; sourceTree = "<group>"; };
@@ -136,21 +124,6 @@
 		C0A8DF26182FF183004D28A3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C0A8DF28182FF1A6004D28A3 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		C0A8DF2A182FF1C4004D28A3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		C0A8DF2D182FFCAF004D28A3 /* RNCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptor.h; sourceTree = "<group>"; };
-		C0A8DF2E182FFCAF004D28A3 /* RNCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptor.m; sourceTree = "<group>"; };
-		C0A8DF2F182FFCAF004D28A3 /* RNDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDecryptor.h; sourceTree = "<group>"; };
-		C0A8DF30182FFCAF004D28A3 /* RNDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDecryptor.m; sourceTree = "<group>"; };
-		C0A8DF31182FFCAF004D28A3 /* RNEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNEncryptor.h; sourceTree = "<group>"; };
-		C0A8DF32182FFCAF004D28A3 /* RNEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNEncryptor.m; sourceTree = "<group>"; };
-		C0A8DF33182FFCAF004D28A3 /* RNOpenSSLCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNOpenSSLCryptor.h; sourceTree = "<group>"; };
-		C0A8DF34182FFCAF004D28A3 /* RNOpenSSLCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNOpenSSLCryptor.m; sourceTree = "<group>"; };
-		C0A8DF35182FFCAF004D28A3 /* RNOpenSSLDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNOpenSSLDecryptor.m; sourceTree = "<group>"; };
-		C0A8DF36182FFCAF004D28A3 /* RNOpenSSLDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNOpenSSLDecryptor.h; sourceTree = "<group>"; };
-		C0A8DF37182FFCAF004D28A3 /* RNOpenSSLEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNOpenSSLEncryptor.h; sourceTree = "<group>"; };
-		C0A8DF38182FFCAF004D28A3 /* RNOpenSSLEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNOpenSSLEncryptor.m; sourceTree = "<group>"; };
-		C0A8DF39182FFCAF004D28A3 /* RNCryptorEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptorEngine.h; sourceTree = "<group>"; };
-		C0A8DF3A182FFCAF004D28A3 /* RNCryptorEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptorEngine.m; sourceTree = "<group>"; };
-		C0A8DF3B182FFCAF004D28A3 /* RNCryptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor+Private.h"; sourceTree = "<group>"; };
 		C0ABF5CF1835B05100A0E51F /* OCSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSettingsViewController.h; sourceTree = "<group>"; };
 		C0ABF5D01835B05100A0E51F /* OCSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSettingsViewController.m; sourceTree = "<group>"; };
 		C0ABF5D11835B05100A0E51F /* OCSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCSettingsViewController.xib; sourceTree = "<group>"; };
@@ -172,15 +145,7 @@
 		C0EE709A17B8142A00C97F0B /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.objj.h; path = OCViewController.h; sourceTree = "<group>"; };
 		C0EE709B17B8142A00C97F0B /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
 		C0EE709E17B8142A00C97F0B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OCViewController.xib; sourceTree = "<group>"; };
-		C0EE70A617B8145C00C97F0B /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = SSKeychain.h; sourceTree = "<group>"; };
-		C0EE70A717B8145C00C97F0B /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
-		C0EE70A817B8145C00C97F0B /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
-		C0EE70A917B8145C00C97F0B /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
-		C0EE70AA17B8145C00C97F0B /* OCSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = OCSecurity.h; sourceTree = "<group>"; };
-		C0EE70AB17B8145C00C97F0B /* OCSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSecurity.m; sourceTree = "<group>"; };
 		C0EE70B217B8146A00C97F0B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		C0EE70BC17B8184200C97F0B /* UIColor+Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = "UIColor+Colours.h"; sourceTree = "<group>"; };
-		C0EE70BD17B8184200C97F0B /* UIColor+Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colours.m"; sourceTree = "<group>"; };
 		C0EE70BE17B8184200C97F0B /* UIHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = UIHelpers.h; sourceTree = "<group>"; };
 		C0EE70BF17B8184200C97F0B /* UIHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHelpers.m; sourceTree = "<group>"; };
 		C0EE70C017B8184200C97F0B /* NSDate+PrettyTimestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = "NSDate+PrettyTimestamp.h"; sourceTree = "<group>"; };
@@ -190,6 +155,7 @@
 		C0EE70D517B820FD00C97F0B /* OCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSession.m; sourceTree = "<group>"; };
 		C0EE70D917B8222900C97F0B /* Onion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Onion.h; sourceTree = "<group>"; };
 		C0EE70DA17B8222900C97F0B /* Onion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Onion.m; sourceTree = "<group>"; };
+		E68FD7297500446DB4810057 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +165,6 @@
 			files = (
 				C02CBD22183B9F1C003C0C94 /* XCTest.framework in Frameworks */,
 				C02CBD07183B9697003C0C94 /* UIKit.framework in Frameworks */,
-				C02CBD20183B9D91003C0C94 /* Parse.framework in Frameworks */,
 				C02CBD06183B9697003C0C94 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,13 +179,13 @@
 				C0A8DF27182FF184004D28A3 /* CoreLocation.framework in Frameworks */,
 				C0A8DF25182FF16F004D28A3 /* AudioToolbox.framework in Frameworks */,
 				C0A8DF23182FED74004D28A3 /* MobileCoreServices.framework in Frameworks */,
-				C02CBD1F183B9D91003C0C94 /* Parse.framework in Frameworks */,
 				C0A8DF21182FED6D004D28A3 /* SystemConfiguration.framework in Frameworks */,
 				C0EE70C917B8184B00C97F0B /* QuartzCore.framework in Frameworks */,
 				C0EE70B317B8146A00C97F0B /* Security.framework in Frameworks */,
 				C0EE708317B8142A00C97F0B /* UIKit.framework in Frameworks */,
 				C0EE708517B8142A00C97F0B /* Foundation.framework in Frameworks */,
 				C0EE708717B8142A00C97F0B /* CoreGraphics.framework in Frameworks */,
+				C5CAA2A40F3442B38BC6F328 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,39 +284,6 @@
 			name = "New Account View Controller";
 			sourceTree = "<group>";
 		};
-		C0A8DF2C182FFC95004D28A3 /* RNCryptor */ = {
-			isa = PBXGroup;
-			children = (
-				C0A8DF2D182FFCAF004D28A3 /* RNCryptor.h */,
-				C0A8DF2E182FFCAF004D28A3 /* RNCryptor.m */,
-				C0A8DF2F182FFCAF004D28A3 /* RNDecryptor.h */,
-				C0A8DF30182FFCAF004D28A3 /* RNDecryptor.m */,
-				C0A8DF31182FFCAF004D28A3 /* RNEncryptor.h */,
-				C0A8DF32182FFCAF004D28A3 /* RNEncryptor.m */,
-				C0A8DF33182FFCAF004D28A3 /* RNOpenSSLCryptor.h */,
-				C0A8DF34182FFCAF004D28A3 /* RNOpenSSLCryptor.m */,
-				C0A8DF35182FFCAF004D28A3 /* RNOpenSSLDecryptor.m */,
-				C0A8DF36182FFCAF004D28A3 /* RNOpenSSLDecryptor.h */,
-				C0A8DF37182FFCAF004D28A3 /* RNOpenSSLEncryptor.h */,
-				C0A8DF38182FFCAF004D28A3 /* RNOpenSSLEncryptor.m */,
-				C0A8DF39182FFCAF004D28A3 /* RNCryptorEngine.h */,
-				C0A8DF3A182FFCAF004D28A3 /* RNCryptorEngine.m */,
-				C0A8DF3B182FFCAF004D28A3 /* RNCryptor+Private.h */,
-			);
-			name = RNCryptor;
-			sourceTree = "<group>";
-		};
-		C0A8DF4318311475004D28A3 /* SSKeychain */ = {
-			isa = PBXGroup;
-			children = (
-				C0EE70A617B8145C00C97F0B /* SSKeychain.h */,
-				C0EE70A717B8145C00C97F0B /* SSKeychain.m */,
-				C0EE70A817B8145C00C97F0B /* SSKeychainQuery.h */,
-				C0EE70A917B8145C00C97F0B /* SSKeychainQuery.m */,
-			);
-			name = SSKeychain;
-			sourceTree = "<group>";
-		};
 		C0ABF5CD1835A92700A0E51F /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +319,7 @@
 				C02CBD08183B9697003C0C94 /* OnionsTests */,
 				C0EE708117B8142A00C97F0B /* Frameworks */,
 				C0EE708017B8142A00C97F0B /* Products */,
+				E68FD7297500446DB4810057 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -408,7 +341,6 @@
 				C0ABF5D41835BD4000A0E51F /* StoreKit.framework */,
 				C0A8DF2A182FF1C4004D28A3 /* CFNetwork.framework */,
 				C0A8DF28182FF1A6004D28A3 /* libz.1.1.3.dylib */,
-				C02CBD1E183B9D91003C0C94 /* Parse.framework */,
 				C0A8DF26182FF183004D28A3 /* CoreLocation.framework */,
 				C0A8DF24182FF16F004D28A3 /* AudioToolbox.framework */,
 				C0A8DF22182FED74004D28A3 /* MobileCoreServices.framework */,
@@ -417,6 +349,7 @@
 				C0EE708417B8142A00C97F0B /* Foundation.framework */,
 				C0EE708617B8142A00C97F0B /* CoreGraphics.framework */,
 				C02CBD04183B9697003C0C94 /* XCTest.framework */,
+				AE55F11AF374488CA4085AA8 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -455,10 +388,8 @@
 		C0EE70A517B8144C00C97F0B /* Security */ = {
 			isa = PBXGroup;
 			children = (
-				C0A8DF4318311475004D28A3 /* SSKeychain */,
-				C0A8DF2C182FFC95004D28A3 /* RNCryptor */,
-				C0EE70AA17B8145C00C97F0B /* OCSecurity.h */,
-				C0EE70AB17B8145C00C97F0B /* OCSecurity.m */,
+				B63E1D5018CC1FF80007C343 /* OCSecurity.h */,
+				B63E1D5118CC1FF80007C343 /* OCSecurity.m */,
 			);
 			name = Security;
 			sourceTree = "<group>";
@@ -477,10 +408,6 @@
 		C0EE70BB17B8182E00C97F0B /* Helpers & Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				C04CDD5F183FB3A70076BAB8 /* SatelliteStore.h */,
-				C04CDD60183FB3A70076BAB8 /* SatelliteStore.m */,
-				C0EE70BC17B8184200C97F0B /* UIColor+Colours.h */,
-				C0EE70BD17B8184200C97F0B /* UIColor+Colours.m */,
 				C0EE70BE17B8184200C97F0B /* UIHelpers.h */,
 				C0EE70BF17B8184200C97F0B /* UIHelpers.m */,
 				C0EE70C017B8184200C97F0B /* NSDate+PrettyTimestamp.h */,
@@ -505,7 +432,7 @@
 			children = (
 				C0EE70D917B8222900C97F0B /* Onion.h */,
 				C0EE70DA17B8222900C97F0B /* Onion.m */,
-				C033F0C618350D00000110FC /* ParseConstants.h */,
+				B63E1D4F18CC1E270007C343 /* OCParseConstants.h */,
 			);
 			name = "API Objects";
 			sourceTree = "<group>";
@@ -535,9 +462,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0EE70A217B8142A00C97F0B /* Build configuration list for PBXNativeTarget "OnionStorage" */;
 			buildPhases = (
+				33C75E5E5B9741DFB7BE3682 /* Check Pods Manifest.lock */,
 				C0EE707B17B8142A00C97F0B /* Sources */,
 				C0EE707C17B8142A00C97F0B /* Frameworks */,
 				C0EE707D17B8142A00C97F0B /* Resources */,
+				ECCC826C904C4D68A46C3097 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -625,6 +554,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33C75E5E5B9741DFB7BE3682 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ECCC826C904C4D68A46C3097 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C02CBCFF183B9697003C0C94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -640,27 +602,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0EE708F17B8142A00C97F0B /* main.m in Sources */,
-				C0A8DF3F182FFCAF004D28A3 /* RNOpenSSLCryptor.m in Sources */,
-				C0A8DF42182FFCAF004D28A3 /* RNCryptorEngine.m in Sources */,
-				C0A8DF41182FFCAF004D28A3 /* RNOpenSSLEncryptor.m in Sources */,
 				C0EE709317B8142A00C97F0B /* OCAppDelegate.m in Sources */,
 				C0EE709C17B8142A00C97F0B /* OCViewController.m in Sources */,
-				C0EE70AD17B8145C00C97F0B /* SSKeychain.m in Sources */,
 				C057668C17B9081000697D8A /* OCOnionsViewController.m in Sources */,
-				C0A8DF3E182FFCAF004D28A3 /* RNEncryptor.m in Sources */,
-				C0EE70AF17B8145C00C97F0B /* SSKeychainQuery.m in Sources */,
 				C032B7D517C06A0000BB7C2E /* OCAboutViewController.m in Sources */,
-				C04CDD61183FB3A70076BAB8 /* SatelliteStore.m in Sources */,
-				C0EE70B117B8145C00C97F0B /* OCSecurity.m in Sources */,
-				C0A8DF3D182FFCAF004D28A3 /* RNDecryptor.m in Sources */,
-				C0EE70C317B8184200C97F0B /* UIColor+Colours.m in Sources */,
 				C0EE70C517B8184200C97F0B /* UIHelpers.m in Sources */,
 				C0ABF5D21835B05100A0E51F /* OCSettingsViewController.m in Sources */,
 				C039E17D17B99E4C0052007A /* OCOnionCell.m in Sources */,
 				C0EE70C717B8184200C97F0B /* NSDate+PrettyTimestamp.m in Sources */,
-				C0A8DF40182FFCAF004D28A3 /* RNOpenSSLDecryptor.m in Sources */,
 				C0EE70D717B820FD00C97F0B /* OCSession.m in Sources */,
-				C0A8DF3C182FFCAF004D28A3 /* RNCryptor.m in Sources */,
+				B63E1D5218CC1FF80007C343 /* OCSecurity.m in Sources */,
 				C05A2E8817BDA26900395C8D /* OCNewAccountViewController.m in Sources */,
 				C039E18517B9D09C0052007A /* HelperView.m in Sources */,
 				C0EE70DC17B8222900C97F0B /* Onion.m in Sources */,
@@ -829,6 +780,7 @@
 		};
 		C0EE70A317B8142A00C97F0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E68FD7297500446DB4810057 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -850,6 +802,7 @@
 		};
 		C0EE70A417B8142A00C97F0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E68FD7297500446DB4810057 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (

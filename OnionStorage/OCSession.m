@@ -38,14 +38,6 @@ static OCSession * _mainSession = nil;
 	if (self = [super init]) {
         // Init Array
         self.OnionData = [NSMutableArray array];
-        
-        // Satellite Store: Set Identifiers
-        [[SatelliteStore shoppingCenter] setProductIdentifiers:@[kProProductID]];
-        
-        // Satellite Store: Get Prodcuts
-        [[SatelliteStore shoppingCenter] getProductsWithCompletion:^(BOOL success) {
-            //
-        }];
 	}
     
 	return self;
@@ -138,48 +130,6 @@ static OCSession * _mainSession = nil;
         return [OCSession userIsPro];
     }
 }
-
-+ (void)purchaseProWithCompletion:(void (^)(BOOL purchased))completion {
-    // If the User is Pro already, return
-    if ([OCSession userIsPro]) {
-        completion(YES);
-        return;
-    }
-    
-    // Use SatelliteStore to buy the product
-    [[SatelliteStore shoppingCenter] purchaseProductWithIdentifier:kProProductID withCompletion:^(SKPaymentTransaction *transaction, BOOL success) {
-        if (success) {
-            [[PFUser currentUser] setValue:@YES forKey:@"Pro"];
-            [[PFUser currentUser] setValue:transaction.transactionIdentifier forKey:@"ProReceipt"];
-            [[PFUser currentUser] saveInBackground];
-        }
-        
-        completion(success);
-    }];
-    
-    // Purchase the Product
-    /*
-     [PFPurchase buyProduct:@"com.subvertllc.Onions.Pro" block:^(NSError *error) {
-     if (!error) {
-     [[PFUser currentUser] setValue:@YES forKey:@"Pro"];
-     [[PFUser currentUser] saveInBackground];
-     }
-     
-     if (completion) {
-     completion(error ? NO : YES);
-     }
-     }];
-     */
-}
-
-/*
-+ (void)TEST__purchaseProWithCompletion:(void (^)(BOOL purchased))completion {
-    [[PFUser currentUser] setValue:@YES forKey:@"Pro"];
-    [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        completion(succeeded);
-    }];
-}
-*/
 
 #pragma mark - Login
 + (void)loginWithUsername:(NSString *)username password:(NSString *)password completion:(void (^)(BOOL))completion {

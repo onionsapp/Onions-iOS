@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 #import "Onion.h"
-#import "SatelliteStore.h"
 
 #define kProProductID @"com.subvertllc.Onions.Pro"
 
@@ -43,7 +42,6 @@
 // Pro
 + (BOOL)userIsPro;
 + (BOOL)userCanCreateOnions;
-+ (void)purchaseProWithCompletion:(void (^)(BOOL purchased))completion;
 
 // Login
 + (void)loginWithUsername:(NSString *)username password:(NSString *)password completion:(void (^)(BOOL success))completion;
