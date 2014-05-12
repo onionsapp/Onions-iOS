@@ -10,6 +10,7 @@
 #import "UIHelpers.h"
 #import "OCViewController.h"
 #import "OCAppDelegate.h"
+#import <BTCDonationViewController.h>
 
 @interface OCAboutViewController ()
 
@@ -109,4 +110,12 @@
         [appDelegate.mainNavigationController setViewControllers:@[oVC]];
     }];
 }
+
+- (IBAction)didSelectBTCButton:(id)sender {
+    BTCDonationViewController *oVC = [BTCDonationViewController newControllerWithBTCAddress:@"" options:nil];
+    OCAppDelegate *appDelegate = (OCAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate.mainNavigationController setViewControllers:@[oVC]];
+}
+
+
 @end

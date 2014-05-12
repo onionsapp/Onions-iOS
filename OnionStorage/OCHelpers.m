@@ -26,8 +26,10 @@
         if (responseData) {
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
             if (json[@"results"][0][@"version"]) {
+                CGFloat jsonVersion = [json[@"results"][0][@"version"] floatValue];
                 NSDictionary *infoDict = [[NSBundle mainBundle] infoDictionary];
-                versionsMatch = [json[@"results"][0][@"version"] isEqualToString:infoDict[@"CFBundleShortVersionString"]];
+                CGFloat thisVersion = [infoDict[@"CFBundleShortVersionString"] floatValue];
+                versionsMatch = thisVersion >= jsonVersion;
             }
         }
         
