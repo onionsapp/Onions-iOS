@@ -12,6 +12,8 @@
 #import "OCAppDelegate.h"
 #import <BTCDonationViewController.h>
 
+static NSString *kDonationBTCAddress = @"";
+
 @interface OCAboutViewController ()
 
 // IBOutlets
@@ -112,7 +114,13 @@
 }
 
 - (IBAction)didSelectBTCButton:(id)sender {
-    BTCDonationViewController *oVC = [BTCDonationViewController newControllerWithBTCAddress:@"" options:nil];
+    NSDictionary *options = @{kBTCDonationUIKeyBackgroundColor:[UIHelpers lightPurpleColor],
+                              kBTCDonationUIKeyAddressLinkColor:[UIColor whiteColor],
+                              kBTCDonationUIKeyFooterTextColor:[UIColor whiteColor],
+                              kBTCDonationUIKeyHeaderBottomTextColor:[UIColor whiteColor],
+                              kBTCDonationUIKeyHeaderTopTextColor:[UIColor whiteColor],
+                              kBTCDonationUIKeyQRColor:[UIHelpers darkPurpleColor]};
+    BTCDonationViewController *oVC = [BTCDonationViewController newControllerWithBTCAddress:kDonationBTCAddress options:options];
     OCAppDelegate *appDelegate = (OCAppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate.mainNavigationController setViewControllers:@[oVC]];
 }

@@ -12,5 +12,7 @@
 
 +(void)makeShadowForView:(UIView *)s withRadius:(float)radius;
 +(void)makeBorderForView:(UIView *)b withWidth:(float)width color:(UIColor *)color cornerRadius:(float)cornerRadius;
++ (UIColor *)lightPurpleColor;
++ (UIColor *)darkPurpleColor;
 + (CAGradientLayer *)purpleGradient;
 @end

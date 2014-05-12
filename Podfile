@@ -8,3 +8,4 @@ pod 'BTCDonationViewController'
 
 # ignore warnings from a specific pod
 pod 'Facebook-iOS-SDK', :inhibit_warnings => true
+pod 'Bolts', :inhibit_warnings => true

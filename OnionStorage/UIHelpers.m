@@ -35,7 +35,15 @@
 }
 
 + (CAGradientLayer *)purpleGradient {
-    return [UIHelpers gradientWithStartColor:[UIColor colorFromHexString:@"#922d8d"] endColor:[UIColor colorFromHexString:@"#65318f"]];
+    return [UIHelpers gradientWithStartColor:[self lightPurpleColor] endColor:[self darkPurpleColor]];
+}
+
++ (UIColor *)lightPurpleColor {
+    return [UIColor colorFromHexString:@"#922d8d"];
+}
+
++ (UIColor *)darkPurpleColor {
+    return [UIColor colorFromHexString:@"#65318f"];
 }
 
 @end
