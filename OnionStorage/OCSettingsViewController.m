@@ -146,32 +146,6 @@
     }
 }
 
-/*
-- (void)purchasePro {
-    if (![OCSession userIsPro]) {
-        // Buy It
-        [OCSession purchaseProWithCompletion:^(BOOL purchased) {
-            // Re-Enable the View
-            [self enablePurchaseButton:YES];
-            
-            // Determine if the product was purchased
-            if (purchased) {
-                [self didPurchasePro];
-            }
-            else {
-                [[[UIAlertView alloc] initWithTitle:@"Houston, we've got a problem!" message:@"It seems there was an error purchasing the product. Please try again." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
-            }
-        }];
-        
-    }
-    else {
-        [self enablePurchaseButton:YES];
-        [self setUIForPro];
-        [[[UIAlertView alloc] initWithTitle:@"Already PRO!" message:@"It seems you've already purchased Pro. I hope you like it." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
-    }
-}
-*/
-
 - (void)enablePurchaseButton:(BOOL)enable {
     self.mainContainer.alpha = enable ? 1.0 : 0.25;
     [self.mainContainer setUserInteractionEnabled:enable];

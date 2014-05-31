@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -53,7 +53,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
         <view contentMode="scaleToFill" id="qbO-bb-8wM" userLabel="About Content">
-            <rect key="frame" x="0.0" y="0.0" width="280" height="1241"/>
+            <rect key="frame" x="0.0" y="0.0" width="280" height="1284"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What is Onions?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3eS-hY-ftL">
@@ -94,22 +94,22 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qjC-Ec-LAG">
-                    <rect key="frame" x="10" y="633" width="260" height="236"/>
+                    <rect key="frame" x="10" y="633" width="260" height="219"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">There's only one real way to trust that everything is as secure as we say it is - and that's not by keeping us to our word. You can read the code at https://onionsapp.github.com/Onions-iOS to read how the app handles encryption and web service calls. Because it is open source, we would love feedback from the community - especially on methods to increase security and improve functionality. Don't be afraid to open a pull request!</string>
+                    <string key="text">There's only one real way to trust that everything is as secure as we say it is - and that's not by keeping us to our word. You can read the code to see how the app handles encryption and web service calls. Because it is open source, we would love feedback from the community - especially on methods to increase security and improve functionality. Don't be afraid to open a pull request!</string>
                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
                     <color key="textColor" red="0.28042204479999999" green="0.28042204479999999" blue="0.28042204479999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="But why free?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O1M-6A-cap">
-                    <rect key="frame" x="10" y="894" width="260" height="30"/>
+                    <rect key="frame" x="10" y="989" width="260" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                     <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gFb-as-mk1">
-                    <rect key="frame" x="10" y="924" width="260" height="195"/>
+                    <rect key="frame" x="10" y="1019" width="260" height="195"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <string key="text">Private information storage in the cloud should be free. With this in mind, we are offering 10 Onions with each free account. However, if you'd like more or want to help support the cause, you can purchase the Pro upgrade for a lifetime charge of $9.99 per account. This allows an unlimited amount of Onions to be stored, and any other future features we add.</string>
                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
@@ -117,27 +117,32 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thanks for using Onions!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z3T-wH-e1H">
-                    <rect key="frame" x="10" y="1139" width="260" height="30"/>
+                    <rect key="frame" x="10" y="1234" width="260" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                     <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Support Onions - donate BTC." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1cM-3z-IDP">
-                    <rect key="frame" x="10" y="1186" width="260" height="30"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="https://github.com/onionsapp/Onions-iOS" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MoF-pm-RI0">
+                    <rect key="frame" x="10" y="863" width="260" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="15"/>
                     <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rUe-ic-50C">
-                    <rect key="frame" x="10" y="1182" width="250" height="41"/>
+                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHub_Logo.png" id="Sdb-8g-NcI">
+                    <rect key="frame" x="51" y="906" width="179" height="56"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kcu-y1-1jg">
+                    <rect key="frame" x="10" y="873" width="250" height="89"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="didSelectBTCButton:" destination="-1" eventType="touchUpInside" id="uWc-ly-DUx"/>
+                        <action selector="didSelectGithubButton:" destination="-1" eventType="touchUpInside" id="Qf6-HJ-Ep0"/>
                     </connections>
                 </button>
             </subviews>
@@ -145,4 +150,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="GitHub_Logo.png" width="1000" height="410"/>
+    </resources>
 </document>

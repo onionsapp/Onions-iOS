@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B63E1D5218CC1FF80007C343 /* OCSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = B63E1D5118CC1FF80007C343 /* OCSecurity.m */; };
+		B6D7467B193A4F2F00CED2C7 /* GitHub_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D7467A193A4F2F00CED2C7 /* GitHub_Logo.png */; };
 		C02CBD06183B9697003C0C94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EE708417B8142A00C97F0B /* Foundation.framework */; };
 		C02CBD07183B9697003C0C94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EE708217B8142A00C97F0B /* UIKit.framework */; };
 		C02CBD0D183B9697003C0C94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02CBD0B183B9697003C0C94 /* InfoPlist.strings */; };
@@ -81,6 +82,7 @@
 		B63E1D4F18CC1E270007C343 /* OCParseConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCParseConstants.h; sourceTree = "<group>"; };
 		B63E1D5018CC1FF80007C343 /* OCSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSecurity.h; sourceTree = "<group>"; };
 		B63E1D5118CC1FF80007C343 /* OCSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSecurity.m; sourceTree = "<group>"; };
+		B6D7467A193A4F2F00CED2C7 /* GitHub_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GitHub_Logo.png; sourceTree = "<group>"; };
 		C02CBD03183B9697003C0C94 /* OnionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02CBD04183B9697003C0C94 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C02CBD0A183B9697003C0C94 /* OnionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OnionsTests-Info.plist"; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 		C0EE70B617B817A000C97F0B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7467A193A4F2F00CED2C7 /* GitHub_Logo.png */,
 				C039E18717B9D2F90052007A /* nointernet-01.png */,
 				C039E18817B9D2F90052007A /* success-01.png */,
 				C039E18917B9D2F90052007A /* unsuccess-01.png */,
@@ -539,6 +542,7 @@
 				C057668D17B9081000697D8A /* OCOnionsViewController.xib in Resources */,
 				C039E19117B9D6410052007A /* icon_29.png in Resources */,
 				C0EE709F17B8142A00C97F0B /* OCViewController.xib in Resources */,
+				B6D7467B193A4F2F00CED2C7 /* GitHub_Logo.png in Resources */,
 				C039E18B17B9D2F90052007A /* success-01.png in Resources */,
 				C039E18A17B9D2F90052007A /* nointernet-01.png in Resources */,
 				C0ABF5D31835B05100A0E51F /* OCSettingsViewController.xib in Resources */,

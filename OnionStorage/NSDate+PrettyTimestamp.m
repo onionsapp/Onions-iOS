@@ -76,7 +76,7 @@
 - (NSString*)stringForComponentValue:(NSInteger)componentValue withName:(NSString*)name andPlural:(NSString*)plural
 {
   NSString *timespan = NSLocalizedString(componentValue == 1 ? name : plural, nil);
-  return [NSString stringWithFormat:@"%d %@ %@", componentValue, timespan, NSLocalizedString(@"ago", nil)];
+  return [NSString stringWithFormat:@"%ld %@ %@", (long)componentValue, timespan, NSLocalizedString(@"ago", nil)];
 }
 
 @end

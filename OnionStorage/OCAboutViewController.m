@@ -13,6 +13,7 @@
 #import <BTCDonationViewController.h>
 
 static NSString *kDonationBTCAddress = @"";
+static NSString *kGithubLink = @"https://github.com/onionsapp/Onions-iOS";
 
 @interface OCAboutViewController ()
 
@@ -123,6 +124,11 @@ static NSString *kDonationBTCAddress = @"";
     BTCDonationViewController *oVC = [BTCDonationViewController newControllerWithBTCAddress:kDonationBTCAddress options:options];
     OCAppDelegate *appDelegate = (OCAppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate.mainNavigationController setViewControllers:@[oVC]];
+}
+
+
+- (IBAction)didSelectGithubButton:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kGithubLink]];
 }
 
 

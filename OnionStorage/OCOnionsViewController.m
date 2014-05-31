@@ -434,12 +434,12 @@
         return YES;
     }
     else if (textField.text.length <= 30) {
-        int currentLength = textField.text.length;
-        int newTextLength = string.length;
+        NSInteger currentLength = textField.text.length;
+        NSInteger newTextLength = string.length;
         
         // Change Length up to the maximum if a user pastes something
         if (currentLength + newTextLength > 30 ) {
-            int maxLength = 30 - currentLength;
+            NSInteger maxLength = 30 - currentLength;
             if (maxLength >= 0) {
                 string = [string substringToIndex:maxLength];
                 textField.text = [textField.text stringByAppendingString:string];
@@ -467,12 +467,12 @@
         return YES;
     }
     else if (textView.text.length <= 2500) {
-        int currentLength = textView.text.length;
-        int newTextLength = text.length;
+        NSInteger currentLength = textView.text.length;
+        NSInteger newTextLength = text.length;
         
         // Change Length up to the maximum if a user pastes something
         if (currentLength + newTextLength > 2500 ) {
-            int maxLength = 2500 - currentLength;
+            NSInteger maxLength = 2500 - currentLength;
             if (maxLength >= 0) {
                 text = [text substringToIndex:maxLength];
                 textView.text = [textView.text stringByAppendingString:text];
@@ -519,15 +519,8 @@
 -(void)addExtraButtons:(BOOL)add {
     if (add) {
         self.doneButton.frame = self.deleteButton.frame;
-        //self.cameraButton.frame = self.deleteButton.frame;
-        //self.galleryButton.center = self.saveButton.center;
         self.doneButton.alpha = 0;
-        //self.cameraButton.alpha = 0;
-        //self.galleryButton.alpha = 0;
-        //[self.galleryButton setUserInteractionEnabled:[OCSession userIsPro]];
         [self.createContainer addSubview:self.doneButton];
-        //[self.createContainer addSubview:self.cameraButton];
-        //[self.createContainer addSubview:self.galleryButton];
         [UIView animateWithDuration:0.05 animations:^{
             self.deleteButton.alpha = 0;
             self.backButton.alpha = 0;
@@ -535,8 +528,6 @@
         } completion:^(BOOL fin){
             [UIView animateWithDuration:0.05 animations:^{
                 self.doneButton.alpha = 1;
-                //self.cameraButton.alpha = 1;
-                //self.galleryButton.alpha = [OCSession userIsPro] ? 1.0 : 0.25;
             }];
         }];
     }
@@ -544,8 +535,6 @@
     else {
         [UIView animateWithDuration:0.05 animations:^{
             self.doneButton.alpha = 0;
-            //self.cameraButton.alpha = 0;
-            //self.galleryButton.alpha = 0;
         } completion:^(BOOL fin){
             [UIView animateWithDuration:0.05 animations:^{
                 self.deleteButton.alpha = self.CurrentOnion ? 1.0 : 0;
@@ -553,8 +542,6 @@
                 self.saveButton.alpha = 1;
             } completion:^(BOOL fin){
                 [self.doneButton removeFromSuperview];
-                //[self.cameraButton removeFromSuperview];
-                //[self.galleryButton removeFromSuperview];
             }];
         }];
     }
