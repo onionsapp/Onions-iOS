@@ -12,7 +12,7 @@
 #import <Parse/PFObject+Subclass.h>
 
 @implementation Onion
-@dynamic onionTitle, onionInfo, userId, iterations;
+@dynamic onionTitle, onionInfo, userId, iterations, onionVersion;
 
 + (NSString *)parseClassName {
     return @"Onion";
@@ -27,6 +27,7 @@
         self.onionInfo = [OCSecurity encryptText:self.onionInfo];
         self.iterations = @(kOCDefaultIterations);
         self.userId = [PFUser currentUser].objectId;
+        self.onionVersion = @(kOCVersionNumber);
         
         [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             self.onionTitle = plainTitle;
@@ -41,8 +42,8 @@
 }
 
 - (void)decrypt {
-    self.onionTitle = [OCSecurity decryptText:self.onionTitle iterations:self.iterations];
-    self.onionInfo = [OCSecurity decryptText:self.onionInfo iterations:self.iterations];
+    self.onionTitle = [OCSecurity decryptText:self.onionTitle iterations:self.iterations version:self.onionVersion];
+    self.onionInfo = [OCSecurity decryptText:self.onionInfo iterations:self.iterations version:self.onionVersion];
 }
 
 + (void)decryptOnions:(NSArray *)onions withCompletion:(void (^)(void))completion {

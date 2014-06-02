@@ -116,15 +116,6 @@
     gradient.frame = self.view.bounds;
     [self.view.layer insertSublayer:gradient atIndex:0];
     
-    // Refresh Control
-    /*
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(pullToRefreshTable) forControlEvents:UIControlEventValueChanged];
-    self.refreshControl.tintColor = [UIColor blackColor];
-    self.refreshControl.alpha = 0.65;
-    [self.onionTableView addSubview:self.refreshControl];
-     */
-    
     // Hide initially
     for (UIView *subview in self.view.subviews) {
         subview.alpha = 0;

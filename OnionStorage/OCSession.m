@@ -97,8 +97,29 @@ static OCSession * _mainSession = nil;
     [query orderByAscending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         [OCSession setOnions:objects];
-        [Onion decryptOnions:[OCSession Onions] withCompletion:completion];
+        [Onion decryptOnions:[OCSession Onions] withCompletion:^{
+            [OCSession migrateOnionsToLatestVersionWithCompletion:completion];
+        }];
     }];
+}
+
++ (void)migrateOnionsToLatestVersionWithCompletion:(void (^)(void))completion {
+    // Migrate
+    for (Onion *onion in [OCSession Onions]) {
+        if (onion.onionVersion.floatValue < kOCVersionNumber) {
+            NSString *title = [onion.onionTitle copy];
+            NSString *info = [onion.onionInfo copy];
+            onion.onionTitle = [OCSecurity encryptText:title];
+            onion.onionInfo = [OCSecurity encryptText:info];
+            onion.onionVersion = @(kOCVersionNumber);
+            [onion save];
+            onion.onionTitle = title;
+            onion.onionInfo = info;
+        }
+    }
+    
+    // Completion
+    completion();
 }
 
 

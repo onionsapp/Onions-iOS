@@ -13,8 +13,34 @@
 
 #define kOCStretchedShaIterations 15000
 #define kOCDefaultIterations 10000
+#define kOCVersionNumber 2.0
 
-static const RNCryptorSettings kOCCryptorAES256Settings = {
+static const RNCryptorSettings kOCCryptorAES256Settings_V2 = {
+    .algorithm = kCCAlgorithmAES128,
+    .blockSize = kCCBlockSizeAES128,
+    .IVSize = kCCBlockSizeAES128,
+    .options = kCCOptionPKCS7Padding,
+    .HMACAlgorithm = kCCHmacAlgSHA256,
+    .HMACLength = CC_SHA256_DIGEST_LENGTH,
+    
+    .keySettings = {
+        .keySize = kCCKeySizeAES256,
+        .saltSize = 8,
+        .PBKDFAlgorithm = kCCPBKDF2,
+        .PRF = kCCPRFHmacAlgSHA1,
+        .rounds = kOCDefaultIterations
+    },
+    
+    .HMACKeySettings = {
+        .keySize = kCCKeySizeAES256,
+        .saltSize = 8,
+        .PBKDFAlgorithm = kCCPBKDF2,
+        .PRF = kCCPRFHmacAlgSHA1,
+        .rounds = kOCDefaultIterations
+    }
+};
+
+static const RNCryptorSettings kOCCryptorAES256Settings_V1 = {
     .algorithm = kCCAlgorithmAES128,
     .blockSize = kCCBlockSizeAES128,
     .IVSize = kCCBlockSizeAES128,
@@ -43,7 +69,7 @@ static const RNCryptorSettings kOCCryptorAES256Settings = {
 @interface OCSecurity : NSObject
 
 + (NSString *)encryptText:(NSString *)text;
-+ (NSString *)decryptText:(NSString *)text iterations:(NSNumber *)iterations;
++ (NSString *)decryptText:(NSString *)text iterations:(NSNumber *)iterations version:(NSNumber *)version;
 + (NSString *)stretchedCredentialString:(NSString *)credential;
 + (NSData *)sha256:(NSData *)dataIn;
 

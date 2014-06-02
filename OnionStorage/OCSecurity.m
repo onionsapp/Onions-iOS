@@ -13,9 +13,9 @@
 
 
 #pragma mark - RNCryptorSettings
-+ (RNCryptorSettings)onionSettingsWithIterations:(int)iterations {
++ (RNCryptorSettings)onionSettingsForVersionNumber:(CGFloat)version iterations:(int)iterations {
     return ({
-        RNCryptorSettings settings = kOCCryptorAES256Settings;
+        RNCryptorSettings settings = version >= 2.0 ? kOCCryptorAES256Settings_V2 : kOCCryptorAES256Settings_V1;
         settings.keySettings.rounds = iterations;
         settings.HMACKeySettings.rounds = iterations;
         settings;
@@ -29,7 +29,7 @@
     }
     
     NSError *error;
-    NSData *encryptedData = [RNEncryptor encryptData:[text dataUsingEncoding:NSUTF8StringEncoding] withSettings:[OCSecurity onionSettingsWithIterations:kOCDefaultIterations] password:[OCSession Password] error:&error];
+    NSData *encryptedData = [RNEncryptor encryptData:[text dataUsingEncoding:NSUTF8StringEncoding] withSettings:[OCSecurity onionSettingsForVersionNumber:kOCVersionNumber iterations:kOCDefaultIterations] password:[OCSession Password] error:&error];
     if (!error) {
         return [encryptedData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     }
@@ -37,13 +37,13 @@
     return nil;
 }
 
-+ (NSString *)decryptText:(NSString *)text iterations:(NSNumber *)iterations {
++ (NSString *)decryptText:(NSString *)text iterations:(NSNumber *)iterations version:(NSNumber *)version {
     if (![OCSession Password]) {
         return nil;
     }
     
     NSError *error;
-    NSData *decryptedData = [RNDecryptor decryptData:[[NSData alloc] initWithBase64EncodedString:text options:NSDataBase64DecodingIgnoreUnknownCharacters] withSettings:[OCSecurity onionSettingsWithIterations:iterations.intValue] password:[OCSession Password] error:&error];
+    NSData *decryptedData = [RNDecryptor decryptData:[[NSData alloc] initWithBase64EncodedString:text options:NSDataBase64DecodingIgnoreUnknownCharacters] withSettings:[OCSecurity onionSettingsForVersionNumber:version.floatValue iterations:iterations.intValue] password:[OCSession Password] error:&error];
     if (!error) {
         return [[NSString alloc] initWithData:decryptedData encoding:NSUTF8StringEncoding];
     }

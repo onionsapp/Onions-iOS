@@ -18,6 +18,7 @@ typedef void (^SuccessBlock) (BOOL success);
 @property (retain) NSString *onionInfo;
 @property (retain) NSNumber *iterations;
 @property (retain) NSString *userId;
+@property (retain) NSNumber *onionVersion;
 
 - (void)saveOnionWithCompletion:(SuccessBlock)completion;
 - (void)decrypt;

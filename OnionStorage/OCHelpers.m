@@ -19,8 +19,8 @@
         
         if (responseData) {
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
-            if (json && json[@"version"]) {
-                versionsMatch = [json[@"version"] isEqualToString:[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]];
+            if (json && json[@"iOS"]) {
+                versionsMatch = [json[@"iOS"] isEqualToString:[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]];
             }
         }
         

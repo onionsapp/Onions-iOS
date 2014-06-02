@@ -60,7 +60,6 @@
 		C0EE709F17B8142A00C97F0B /* OCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0EE709D17B8142A00C97F0B /* OCViewController.xib */; };
 		C0EE70B317B8146A00C97F0B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EE70B217B8146A00C97F0B /* Security.framework */; };
 		C0EE70C517B8184200C97F0B /* UIHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70BF17B8184200C97F0B /* UIHelpers.m */; };
-		C0EE70C717B8184200C97F0B /* NSDate+PrettyTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70C117B8184200C97F0B /* NSDate+PrettyTimestamp.m */; };
 		C0EE70C917B8184B00C97F0B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EE70C817B8184B00C97F0B /* QuartzCore.framework */; };
 		C0EE70D717B820FD00C97F0B /* OCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70D517B820FD00C97F0B /* OCSession.m */; };
 		C0EE70DC17B8222900C97F0B /* Onion.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE70DA17B8222900C97F0B /* Onion.m */; };
@@ -150,8 +149,6 @@
 		C0EE70B217B8146A00C97F0B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C0EE70BE17B8184200C97F0B /* UIHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = UIHelpers.h; sourceTree = "<group>"; };
 		C0EE70BF17B8184200C97F0B /* UIHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHelpers.m; sourceTree = "<group>"; };
-		C0EE70C017B8184200C97F0B /* NSDate+PrettyTimestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = "NSDate+PrettyTimestamp.h"; sourceTree = "<group>"; };
-		C0EE70C117B8184200C97F0B /* NSDate+PrettyTimestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+PrettyTimestamp.m"; sourceTree = "<group>"; };
 		C0EE70C817B8184B00C97F0B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C0EE70D417B820FD00C97F0B /* OCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = OCSession.h; sourceTree = "<group>"; };
 		C0EE70D517B820FD00C97F0B /* OCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSession.m; sourceTree = "<group>"; };
@@ -413,8 +410,6 @@
 			children = (
 				C0EE70BE17B8184200C97F0B /* UIHelpers.h */,
 				C0EE70BF17B8184200C97F0B /* UIHelpers.m */,
-				C0EE70C017B8184200C97F0B /* NSDate+PrettyTimestamp.h */,
-				C0EE70C117B8184200C97F0B /* NSDate+PrettyTimestamp.m */,
 				C032B7C717BE54C400BB7C2E /* OCHelpers.h */,
 				C032B7C817BE54C400BB7C2E /* OCHelpers.m */,
 			);
@@ -613,7 +608,6 @@
 				C0EE70C517B8184200C97F0B /* UIHelpers.m in Sources */,
 				C0ABF5D21835B05100A0E51F /* OCSettingsViewController.m in Sources */,
 				C039E17D17B99E4C0052007A /* OCOnionCell.m in Sources */,
-				C0EE70C717B8184200C97F0B /* NSDate+PrettyTimestamp.m in Sources */,
 				C0EE70D717B820FD00C97F0B /* OCSession.m in Sources */,
 				B63E1D5218CC1FF80007C343 /* OCSecurity.m in Sources */,
 				C05A2E8817BDA26900395C8D /* OCNewAccountViewController.m in Sources */,
