@@ -135,10 +135,16 @@
 #pragma mark - Create Account
 - (void)createAccount {
     [OCSession signUpWithUsername:self.userTextField.text password:self.passwordTextField.text completion:^(PFUser *user) {
-        // Launch OCOnionsViewController
-        OCOnionsViewController *oVC = [[OCOnionsViewController alloc] initWithNibName:@"OCOnionsViewController" bundle:nil user:self.userTextField.text hasOnions:NO];
-        OCAppDelegate *appDelegate = (OCAppDelegate *)[[UIApplication sharedApplication] delegate];
-        [appDelegate.mainNavigationController setViewControllers:@[oVC]];
+        if (user) {
+            // Launch OCOnionsViewController
+            OCOnionsViewController *oVC = [[OCOnionsViewController alloc] initWithNibName:@"OCOnionsViewController" bundle:nil user:self.userTextField.text hasOnions:NO];
+            OCAppDelegate *appDelegate = (OCAppDelegate *)[[UIApplication sharedApplication] delegate];
+            [appDelegate.mainNavigationController setViewControllers:@[oVC]];
+        }
+        else {
+            [HelperView launchHelperViewInView:self.view withImage:[UIImage imageNamed:@"unsuccess-01.png"] text:@"This username already exists. Choose another." duration:1.3];
+            [self setRegisterEnabled:YES];
+        }
     }];
 }
 
