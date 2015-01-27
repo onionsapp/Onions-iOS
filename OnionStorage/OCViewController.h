@@ -8,7 +8,8 @@
 
 //@import UIKit;
 #import <UIKit/UIKit.h>
+#import "OCBaseViewController.h"
 
-@interface OCViewController : UIViewController <UITextFieldDelegate>
+@interface OCViewController : OCBaseViewController <UITextFieldDelegate>
 
 @end

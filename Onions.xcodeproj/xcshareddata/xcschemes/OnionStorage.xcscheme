@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C0EE707E17B8142A00C97F0B"
-               BuildableName = "OnionStorage.app"
-               BlueprintName = "OnionStorage"
-               ReferencedContainer = "container:OnionStorage.xcodeproj">
+               BuildableName = "Onions.app"
+               BlueprintName = "Onions"
+               ReferencedContainer = "container:Onions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "C02CBD02183B9697003C0C94"
                BuildableName = "OnionsTests.xctest"
                BlueprintName = "OnionsTests"
-               ReferencedContainer = "container:OnionStorage.xcodeproj">
+               ReferencedContainer = "container:Onions.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C0EE707E17B8142A00C97F0B"
-            BuildableName = "OnionStorage.app"
-            BlueprintName = "OnionStorage"
-            ReferencedContainer = "container:OnionStorage.xcodeproj">
+            BuildableName = "Onions.app"
+            BlueprintName = "Onions"
+            ReferencedContainer = "container:Onions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C0EE707E17B8142A00C97F0B"
-            BuildableName = "OnionStorage.app"
-            BlueprintName = "OnionStorage"
-            ReferencedContainer = "container:OnionStorage.xcodeproj">
+            BuildableName = "Onions.app"
+            BlueprintName = "Onions"
+            ReferencedContainer = "container:Onions.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C0EE707E17B8142A00C97F0B"
-            BuildableName = "OnionStorage.app"
-            BlueprintName = "OnionStorage"
-            ReferencedContainer = "container:OnionStorage.xcodeproj">
+            BuildableName = "Onions.app"
+            BlueprintName = "Onions"
+            ReferencedContainer = "container:Onions.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

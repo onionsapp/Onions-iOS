@@ -27,7 +27,7 @@
     
     // Set up Parse SDK
     [Onion registerSubclass];
-    [Parse setApplicationId:kOCParseAppId clientKey:kOCParseClientKey];
+    [Parse setApplicationId:PARSE_APP_ID clientKey:PARSE_CLIENT_ID];
     
     // Make sure OCSession is set up and clear
     [OCSession dropData];

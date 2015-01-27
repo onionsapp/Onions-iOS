@@ -89,7 +89,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [self animateVCShowingUp];
+    [super viewDidAppear:animated];
     [self addShadows];
     
     // Load Onions
@@ -99,6 +99,7 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -130,24 +131,6 @@
 
 
 #pragma mark - Animations
-- (void)animateVCShowingUp {
-    [UIView animateWithDuration:0.3 animations:^{
-        for (UIView *subview in self.view.subviews) {
-            subview.alpha = (subview == self.onionContainer && !self.hasLoadedOnions) ? 0.25 : 1;
-        }
-    }];
-}
-
-- (void)animateVCLeavingWithCompletion:(void (^)(void))completion {
-    [UIView animateWithDuration:0.3 animations:^{
-        for (UIView *subview in self.view.subviews) {
-            subview.alpha = 0;
-        }
-    } completion:^(BOOL fin){
-        completion();
-    }];
-}
-
 - (void)animateCreateViewEntering {
     self.createContainer.frame = CGRectMake(self.view.frame.size.width, self.onionContainer.frame.origin.y, self.onionContainer.frame.size.width, self.onionContainer.frame.size.height);
     [self.view addSubview:self.createContainer];
@@ -340,7 +323,7 @@
 
 - (void)launchViewController:(UIViewController *)launchVC {
     OCAppDelegate *appDelegate = (OCAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [self animateVCLeavingWithCompletion:^{
+    [self hideUIWithAnimation:YES completion:^{
         [appDelegate.mainNavigationController setViewControllers:@[launchVC]];
     }];
 }

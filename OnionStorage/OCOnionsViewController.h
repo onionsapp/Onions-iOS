@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Onion.h"
+#import "OCBaseViewController.h"
 #import <Parse/Parse.h>
 
-@interface OCOnionsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UITextViewDelegate, UIAlertViewDelegate>
+@interface OCOnionsViewController : OCBaseViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UITextViewDelegate, UIAlertViewDelegate>
 
 // Methods
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil user:(NSString *)user hasOnions:(BOOL)hasOnions;

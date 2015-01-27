@@ -62,8 +62,14 @@ static NSString * const kOCAppStoreURLPath = @"https://itunes.apple.com/us/app/o
     }];
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self buildUI];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
-    [self animateVCShowingUp];
+    [super viewDidAppear:animated];
+    [self validateForLoginButton];
 }
 
 
@@ -71,16 +77,6 @@ static NSString * const kOCAppStoreURLPath = @"https://itunes.apple.com/us/app/o
 -(void)buildUI {
     [UIHelpers makeShadowForView:self.loginContainer withRadius:3];
     [UIHelpers makeBorderForView:self.loginButton withWidth:1 color:[UIColor colorWithWhite:1.0 alpha:0.25] cornerRadius:3];
-    
-    // Make gradient
-    CAGradientLayer *gradient = [UIHelpers purpleGradient];
-    gradient.frame = self.view.bounds;
-    [self.view.layer insertSublayer:gradient atIndex:0];
-    
-    // Set hidden initiallly
-    for (UIView *subview in self.view.subviews) {
-        subview.alpha = 0;
-    }
 }
 
 
@@ -155,47 +151,19 @@ static NSString * const kOCAppStoreURLPath = @"https://itunes.apple.com/us/app/o
 }
 
 - (IBAction)didClickNewAccount:(id)sender {
-    [self animateVCLeavingWithCompletion:^{
+    [self hideUIWithAnimation:YES completion:^{
         [self launchViewController:[[OCNewAccountViewController alloc] initWithNibName:@"OCNewAccountViewController" bundle:nil]];
     }];
 }
 
 - (IBAction)didClickAbout:(id)sender {
-    [self animateVCLeavingWithCompletion:^{
+    [self hideUIWithAnimation:YES completion:^{
         [self launchViewController:[[OCAboutViewController alloc] initWithNibName:@"OCAboutViewController" bundle:nil]];
     }];
 }
 
-- (void)launchViewController:(UIViewController *)launchVC {
-    OCAppDelegate *appDelegate = (OCAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDelegate.mainNavigationController setViewControllers:@[launchVC]];
-}
-
-
 - (IBAction)didClickHideTextFields:(id)sender {
     [self.view endEditing:YES];
-}
-
-
-#pragma mark - Animations
-- (void)animateVCShowingUp {
-    [UIView animateWithDuration:0.3 animations:^{
-        for (UIView *subview in self.view.subviews) {
-            subview.alpha = 1;
-        }
-    }];
-    
-    [self validateForLoginButton];
-}
-
-- (void)animateVCLeavingWithCompletion:(void (^)(void))completion {
-    [UIView animateWithDuration:0.3 animations:^{
-        for (UIView *subview in self.view.subviews) {
-            subview.alpha = 0;
-        }
-    } completion:^(BOOL fin){
-        completion();
-    }];
 }
 
 

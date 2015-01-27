@@ -37,6 +37,8 @@
 		C057668D17B9081000697D8A /* OCOnionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C057668B17B9081000697D8A /* OCOnionsViewController.xib */; };
 		C05A2E8817BDA26900395C8D /* OCNewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05A2E8617BDA26900395C8D /* OCNewAccountViewController.m */; };
 		C05A2E8917BDA26900395C8D /* OCNewAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05A2E8717BDA26900395C8D /* OCNewAccountViewController.xib */; };
+		C062040A1A7840F00059409D /* OCLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06204091A7840F00059409D /* OCLaunchScreen.xib */; };
+		C062040E1A7843240059409D /* OCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C062040D1A7843240059409D /* OCBaseViewController.m */; };
 		C0A8DF21182FED6D004D28A3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A8DF20182FED6D004D28A3 /* SystemConfiguration.framework */; };
 		C0A8DF23182FED74004D28A3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A8DF22182FED74004D28A3 /* MobileCoreServices.framework */; };
 		C0A8DF25182FF16F004D28A3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A8DF24182FF16F004D28A3 /* AudioToolbox.framework */; };
@@ -119,6 +121,10 @@
 		C05A2E8517BDA26900395C8D /* OCNewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCNewAccountViewController.h; sourceTree = "<group>"; };
 		C05A2E8617BDA26900395C8D /* OCNewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCNewAccountViewController.m; sourceTree = "<group>"; };
 		C05A2E8717BDA26900395C8D /* OCNewAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCNewAccountViewController.xib; sourceTree = "<group>"; };
+		C06204091A7840F00059409D /* OCLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCLaunchScreen.xib; sourceTree = "<group>"; };
+		C062040B1A7841850059409D /* OCParseConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCParseConstants.h; sourceTree = "<group>"; };
+		C062040C1A7843240059409D /* OCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCBaseViewController.h; sourceTree = "<group>"; };
+		C062040D1A7843240059409D /* OCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCBaseViewController.m; sourceTree = "<group>"; };
 		C0A8DF20182FED6D004D28A3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C0A8DF22182FED74004D28A3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C0A8DF24182FF16F004D28A3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -130,14 +136,14 @@
 		C0ABF5D11835B05100A0E51F /* OCSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCSettingsViewController.xib; sourceTree = "<group>"; };
 		C0ABF5D41835BD4000A0E51F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C0CCB4A917B86EDB007C334B /* logo-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-01.png"; sourceTree = "<group>"; };
-		C0EE707F17B8142A00C97F0B /* OnionStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnionStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0EE707F17B8142A00C97F0B /* Onions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0EE708217B8142A00C97F0B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C0EE708417B8142A00C97F0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C0EE708617B8142A00C97F0B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C0EE708A17B8142A00C97F0B /* OnionStorage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OnionStorage-Info.plist"; sourceTree = "<group>"; };
+		C0EE708A17B8142A00C97F0B /* Onions-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Onions-Info.plist"; sourceTree = "<group>"; };
 		C0EE708C17B8142A00C97F0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C0EE708E17B8142A00C97F0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C0EE709017B8142A00C97F0B /* OnionStorage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnionStorage-Prefix.pch"; sourceTree = "<group>"; };
+		C0EE709017B8142A00C97F0B /* Onions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Onions-Prefix.pch"; sourceTree = "<group>"; };
 		C0EE709117B8142A00C97F0B /* OCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.objj.h; path = OCAppDelegate.h; sourceTree = "<group>"; };
 		C0EE709217B8142A00C97F0B /* OCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAppDelegate.m; sourceTree = "<group>"; };
 		C0EE709417B8142A00C97F0B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -154,7 +160,8 @@
 		C0EE70D517B820FD00C97F0B /* OCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSession.m; sourceTree = "<group>"; };
 		C0EE70D917B8222900C97F0B /* Onion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Onion.h; sourceTree = "<group>"; };
 		C0EE70DA17B8222900C97F0B /* Onion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Onion.m; sourceTree = "<group>"; };
-		E68FD7297500446DB4810057 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C99EFC2F33A5DE391496655B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E3A212729821FF6CB194BA47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +198,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		195AE8D2007A24BF5FD234D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3A212729821FF6CB194BA47 /* Pods.debug.xcconfig */,
+				C99EFC2F33A5DE391496655B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C02CBD08183B9697003C0C94 /* OnionsTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +254,8 @@
 				C05A2E8417BDA20500395C8D /* New Account View Controller */,
 				C057668817B907E100697D8A /* Onions ViewController */,
 				C057669517B90BD400697D8A /* Login ViewController */,
+				C062040C1A7843240059409D /* OCBaseViewController.h */,
+				C062040D1A7843240059409D /* OCBaseViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -245,9 +263,8 @@
 		C039E18017B9D0830052007A /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				C039E18117B9D09C0052007A /* HelperView.h */,
-				C039E18217B9D09C0052007A /* HelperView.m */,
-				C039E18317B9D09C0052007A /* HelperView.xib */,
+				C06204081A7840E10059409D /* Launch XIB */,
+				C06204071A7840D50059409D /* Helper View */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -283,6 +300,24 @@
 			name = "New Account View Controller";
 			sourceTree = "<group>";
 		};
+		C06204071A7840D50059409D /* Helper View */ = {
+			isa = PBXGroup;
+			children = (
+				C039E18117B9D09C0052007A /* HelperView.h */,
+				C039E18217B9D09C0052007A /* HelperView.m */,
+				C039E18317B9D09C0052007A /* HelperView.xib */,
+			);
+			name = "Helper View";
+			sourceTree = "<group>";
+		};
+		C06204081A7840E10059409D /* Launch XIB */ = {
+			isa = PBXGroup;
+			children = (
+				C06204091A7840F00059409D /* OCLaunchScreen.xib */,
+			);
+			name = "Launch XIB";
+			sourceTree = "<group>";
+		};
 		C0ABF5CD1835A92700A0E51F /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,18 +349,18 @@
 				C039E18E17B9D6410052007A /* icon_58.png */,
 				C039E18F17B9D6410052007A /* icon_80.png */,
 				C039E19017B9D6410052007A /* icon_120.png */,
-				C0EE708817B8142A00C97F0B /* OnionStorage */,
+				C0EE708817B8142A00C97F0B /* Onions */,
 				C02CBD08183B9697003C0C94 /* OnionsTests */,
 				C0EE708117B8142A00C97F0B /* Frameworks */,
 				C0EE708017B8142A00C97F0B /* Products */,
-				E68FD7297500446DB4810057 /* Pods.xcconfig */,
+				195AE8D2007A24BF5FD234D6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		C0EE708017B8142A00C97F0B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0EE707F17B8142A00C97F0B /* OnionStorage.app */,
+				C0EE707F17B8142A00C97F0B /* Onions.app */,
 				C02CBD03183B9697003C0C94 /* OnionsTests.xctest */,
 			);
 			name = Products;
@@ -353,7 +388,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C0EE708817B8142A00C97F0B /* OnionStorage */ = {
+		C0EE708817B8142A00C97F0B /* Onions */ = {
 			isa = PBXGroup;
 			children = (
 				C039E18017B9D0830052007A /* Custom Views */,
@@ -366,6 +401,7 @@
 				C032B7D117C069D800BB7C2E /* Controllers */,
 				C0EE708917B8142A00C97F0B /* Supporting Files */,
 			);
+			name = Onions;
 			path = OnionStorage;
 			sourceTree = "<group>";
 		};
@@ -373,10 +409,10 @@
 			isa = PBXGroup;
 			children = (
 				C0EE70B617B817A000C97F0B /* Images */,
-				C0EE708A17B8142A00C97F0B /* OnionStorage-Info.plist */,
+				C0EE708A17B8142A00C97F0B /* Onions-Info.plist */,
 				C0EE708B17B8142A00C97F0B /* InfoPlist.strings */,
 				C0EE708E17B8142A00C97F0B /* main.m */,
-				C0EE709017B8142A00C97F0B /* OnionStorage-Prefix.pch */,
+				C0EE709017B8142A00C97F0B /* Onions-Prefix.pch */,
 				C0EE709417B8142A00C97F0B /* Default.png */,
 				C0EE709617B8142A00C97F0B /* Default@2x.png */,
 				C0EE709817B8142A00C97F0B /* Default-568h@2x.png */,
@@ -389,6 +425,7 @@
 			children = (
 				B63E1D5018CC1FF80007C343 /* OCSecurity.h */,
 				B63E1D5118CC1FF80007C343 /* OCSecurity.m */,
+				C062040B1A7841850059409D /* OCParseConstants.h */,
 			);
 			name = Security;
 			sourceTree = "<group>";
@@ -456,9 +493,9 @@
 			productReference = C02CBD03183B9697003C0C94 /* OnionsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C0EE707E17B8142A00C97F0B /* OnionStorage */ = {
+		C0EE707E17B8142A00C97F0B /* Onions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0EE70A217B8142A00C97F0B /* Build configuration list for PBXNativeTarget "OnionStorage" */;
+			buildConfigurationList = C0EE70A217B8142A00C97F0B /* Build configuration list for PBXNativeTarget "Onions" */;
 			buildPhases = (
 				33C75E5E5B9741DFB7BE3682 /* Check Pods Manifest.lock */,
 				C0EE707B17B8142A00C97F0B /* Sources */,
@@ -470,9 +507,9 @@
 			);
 			dependencies = (
 			);
-			name = OnionStorage;
+			name = Onions;
 			productName = OnionStorage;
-			productReference = C0EE707F17B8142A00C97F0B /* OnionStorage.app */;
+			productReference = C0EE707F17B8142A00C97F0B /* Onions.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -493,7 +530,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C0EE707A17B8142A00C97F0B /* Build configuration list for PBXProject "OnionStorage" */;
+			buildConfigurationList = C0EE707A17B8142A00C97F0B /* Build configuration list for PBXProject "Onions" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -505,7 +542,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0EE707E17B8142A00C97F0B /* OnionStorage */,
+				C0EE707E17B8142A00C97F0B /* Onions */,
 				C02CBD02183B9697003C0C94 /* OnionsTests */,
 			);
 		};
@@ -537,6 +574,7 @@
 				C057668D17B9081000697D8A /* OCOnionsViewController.xib in Resources */,
 				C039E19117B9D6410052007A /* icon_29.png in Resources */,
 				C0EE709F17B8142A00C97F0B /* OCViewController.xib in Resources */,
+				C062040A1A7840F00059409D /* OCLaunchScreen.xib in Resources */,
 				B6D7467B193A4F2F00CED2C7 /* GitHub_Logo.png in Resources */,
 				C039E18B17B9D2F90052007A /* success-01.png in Resources */,
 				C039E18A17B9D2F90052007A /* nointernet-01.png in Resources */,
@@ -581,7 +619,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -614,6 +652,7 @@
 				C039E18517B9D09C0052007A /* HelperView.m in Sources */,
 				C0EE70DC17B8222900C97F0B /* Onion.m in Sources */,
 				C032B7C917BE54C400BB7C2E /* OCHelpers.m in Sources */,
+				C062040E1A7843240059409D /* OCBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,7 +661,7 @@
 /* Begin PBXTargetDependency section */
 		C02CBD12183B9697003C0C94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C0EE707E17B8142A00C97F0B /* OnionStorage */;
+			target = C0EE707E17B8142A00C97F0B /* Onions */;
 			targetProxy = C02CBD11183B9697003C0C94 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -778,44 +817,48 @@
 		};
 		C0EE70A317B8142A00C97F0B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E68FD7297500446DB4810057 /* Pods.xcconfig */;
+			baseConfigurationReference = E3A212729821FF6CB194BA47 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"${SRCROOT}\"",
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OnionStorage/OnionStorage-Prefix.pch";
-				INFOPLIST_FILE = "OnionStorage/OnionStorage-Info.plist";
+				GCC_PREFIX_HEADER = "OnionStorage/Onions-Prefix.pch";
+				INFOPLIST_FILE = "OnionStorage/Onions-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Onions;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		C0EE70A417B8142A00C97F0B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E68FD7297500446DB4810057 /* Pods.xcconfig */;
+			baseConfigurationReference = C99EFC2F33A5DE391496655B /* Pods.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"${SRCROOT}\"",
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OnionStorage/OnionStorage-Prefix.pch";
-				INFOPLIST_FILE = "OnionStorage/OnionStorage-Info.plist";
+				GCC_PREFIX_HEADER = "OnionStorage/Onions-Prefix.pch";
+				INFOPLIST_FILE = "OnionStorage/Onions-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Onions;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -832,7 +875,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0EE707A17B8142A00C97F0B /* Build configuration list for PBXProject "OnionStorage" */ = {
+		C0EE707A17B8142A00C97F0B /* Build configuration list for PBXProject "Onions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0EE70A017B8142A00C97F0B /* Debug */,
@@ -841,7 +884,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0EE70A217B8142A00C97F0B /* Build configuration list for PBXNativeTarget "OnionStorage" */ = {
+		C0EE70A217B8142A00C97F0B /* Build configuration list for PBXNativeTarget "Onions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0EE70A317B8142A00C97F0B /* Debug */,
