@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OCSettingsViewController">
@@ -18,10 +19,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G40-pP-f7W">
-                    <rect key="frame" x="10" y="331" width="300" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G40-pP-f7W">
+                    <rect key="frame" x="10" y="325" width="300" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="42K-zb-Crd"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
                     <state key="normal" title="BACK">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,20 +37,20 @@
                         <action selector="didSelectBack:" destination="-1" eventType="touchUpInside" id="gEa-aA-sRO"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AU7-ml-U5M" userLabel="Container">
-                    <rect key="frame" x="10" y="37" width="300" height="214"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AU7-ml-U5M" userLabel="Container">
+                    <rect key="frame" x="10" y="37" width="300" height="208"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Early Adopter!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="Czr-sX-cGi">
-                            <rect key="frame" x="10" y="9" width="260" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Early Adopter!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="Czr-sX-cGi">
+                            <rect key="frame" x="10" y="9" width="280" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="rQR-uo-o99"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                             <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="RKz-Qo-1cg">
-                            <rect key="frame" x="10" y="42" width="280" height="161"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="RKz-Qo-1cg">
+                            <rect key="frame" x="10" y="42" width="280" height="155"/>
                             <string key="text">Thanks for being an early adopter of the Onions app. You get an unlimited amount of Onions you can create for free. In the future, there will be a Pro version upgrade that allows only 10 for free onions. Thanks for downloading and showing support right now, and tell all of your friends!</string>
                             <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
                             <color key="textColor" red="0.28042204479999999" green="0.28042204479999999" blue="0.28042204479999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,11 +58,22 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Czr-sX-cGi" firstAttribute="top" secondItem="AU7-ml-U5M" secondAttribute="top" constant="9" id="J84-Qm-YxK"/>
+                        <constraint firstItem="RKz-Qo-1cg" firstAttribute="leading" secondItem="AU7-ml-U5M" secondAttribute="leading" constant="10" id="RmQ-ED-hAT"/>
+                        <constraint firstAttribute="trailing" secondItem="Czr-sX-cGi" secondAttribute="trailing" constant="10" id="UIe-jH-7oB"/>
+                        <constraint firstItem="Czr-sX-cGi" firstAttribute="leading" secondItem="AU7-ml-U5M" secondAttribute="leading" constant="10" id="VA7-zs-SDw"/>
+                        <constraint firstAttribute="bottom" secondItem="RKz-Qo-1cg" secondAttribute="bottom" constant="11" id="VVu-8r-GHT"/>
+                        <constraint firstItem="RKz-Qo-1cg" firstAttribute="top" secondItem="Czr-sX-cGi" secondAttribute="bottom" constant="3" id="Zbn-ca-Rbe"/>
+                        <constraint firstAttribute="trailing" secondItem="RKz-Qo-1cg" secondAttribute="trailing" constant="10" id="tcv-Tf-9ea"/>
+                    </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ED-Xr-QdT">
-                    <rect key="frame" x="10" y="267" width="300" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ED-Xr-QdT">
+                    <rect key="frame" x="10" y="261" width="300" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="PgS-7g-4h0"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
                     <state key="normal" title="DELETE ACCOUNT">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,8 +88,17 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.79240171370967749" alpha="1" colorSpace="calibratedWhite"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <constraints>
+                <constraint firstItem="AU7-ml-U5M" firstAttribute="top" secondItem="1" secondAttribute="top" constant="37" id="E1g-XI-Sxs"/>
+                <constraint firstItem="7ED-Xr-QdT" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="10" id="FqK-fX-8Tb"/>
+                <constraint firstItem="G40-pP-f7W" firstAttribute="top" secondItem="7ED-Xr-QdT" secondAttribute="bottom" constant="14" id="H2T-9i-u65"/>
+                <constraint firstAttribute="trailing" secondItem="G40-pP-f7W" secondAttribute="trailing" constant="10" id="NJ3-sK-LQG"/>
+                <constraint firstAttribute="trailing" secondItem="7ED-Xr-QdT" secondAttribute="trailing" constant="10" id="SYk-n2-jXC"/>
+                <constraint firstItem="G40-pP-f7W" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="10" id="cJc-K0-H2c"/>
+                <constraint firstItem="AU7-ml-U5M" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="10" id="ecq-h9-Eq4"/>
+                <constraint firstItem="7ED-Xr-QdT" firstAttribute="top" secondItem="AU7-ml-U5M" secondAttribute="bottom" constant="16" id="fhW-WS-X5V"/>
+                <constraint firstAttribute="trailing" secondItem="AU7-ml-U5M" secondAttribute="trailing" constant="10" id="hYL-ep-Rfw"/>
+            </constraints>
         </view>
         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Upgrade to Pro Account" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" id="tzf-zH-0iw">
             <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
@@ -105,4 +128,9 @@
             </connections>
         </button>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

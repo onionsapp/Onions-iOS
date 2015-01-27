@@ -525,14 +525,14 @@
 #pragma mark - Keyboard Notification
 -(void)keyboardDidShow:(NSNotification *)notification {
     NSDictionary* keyboardInfo = [notification userInfo];
-    NSValue* keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
-    [self resizeTextViewForAppearing:YES withKeyboardRect:[keyboardFrameBegin CGRectValue]];
+    NSValue* keyboardFrameEnd = [keyboardInfo valueForKey:UIKeyboardFrameEndUserInfoKey];
+    [self resizeTextViewForAppearing:YES withKeyboardRect:[keyboardFrameEnd CGRectValue]];
 }
 
 -(void)keyboardDidHide:(NSNotification *)notification {
     NSDictionary* keyboardInfo = [notification userInfo];
-    NSValue* keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
-    [self resizeTextViewForAppearing:NO withKeyboardRect:[keyboardFrameBegin CGRectValue]];
+    NSValue* keyboardFrameEnd = [keyboardInfo valueForKey:UIKeyboardFrameEndUserInfoKey];
+    [self resizeTextViewForAppearing:NO withKeyboardRect:[keyboardFrameEnd CGRectValue]];
 }
 
 

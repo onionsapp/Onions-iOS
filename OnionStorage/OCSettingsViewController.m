@@ -58,10 +58,6 @@
     [self buildUI];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [self animateVCShowingUp];
-}
-
 
 #pragma mark - Memory
 - (void)didReceiveMemoryWarning
@@ -76,11 +72,6 @@
     [UIHelpers makeBorderForView:self.backButton withWidth:1 color:[UIColor colorWithWhite:1.0 alpha:0.25] cornerRadius:3];
     [UIHelpers makeShadowForView:self.mainContainer withRadius:3];
     
-    // Make gradient
-    CAGradientLayer *gradient = [UIHelpers purpleGradient];
-    gradient.frame = self.view.bounds;
-    [self.view.layer insertSublayer:gradient atIndex:0];
-    
     // Pro
     [self setUIForPro];
     
@@ -88,26 +79,6 @@
     for (UIView *subview in self.view.subviews) {
         subview.alpha = 0;
     }
-}
-
-
-#pragma mark - VC Animations
-- (void)animateVCShowingUp {
-    [UIView animateWithDuration:0.3 animations:^{
-        for (UIView *subview in self.view.subviews) {
-            subview.alpha = 1;
-        }
-    }];
-}
-
-- (void)animateVCLeavingWithCompletion:(void (^)(void))completion {
-    [UIView animateWithDuration:0.3 animations:^{
-        for (UIView *subview in self.view.subviews) {
-            subview.alpha = 0;
-        }
-    } completion:^(BOOL fin){
-        completion();
-    }];
 }
 
 
@@ -167,7 +138,7 @@
 
 - (void)launchViewController:(UIViewController *)launchVC {
     OCAppDelegate *appDelegate = (OCAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [self animateVCLeavingWithCompletion:^{
+    [self hideUIWithAnimation:YES completion:^{
         [appDelegate.mainNavigationController setViewControllers:@[launchVC]];
     }];
 }

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OCBaseViewController.h"
 
-@interface OCSettingsViewController : UIViewController <UIAlertViewDelegate>
+@interface OCSettingsViewController : OCBaseViewController <UIAlertViewDelegate>
 
 // Init
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil username:(NSString *)user;
