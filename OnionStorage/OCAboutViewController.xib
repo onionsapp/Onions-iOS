@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OCAboutViewController">
@@ -19,10 +19,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mcL-Nh-cWp">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcL-Nh-cWp">
                     <rect key="frame" x="20" y="500" width="280" height="51"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="Lhl-Rc-m0v"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                     <state key="normal" title="BACK">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,13 +37,11 @@
                         <action selector="didSelectBack:" destination="-1" eventType="touchUpInside" id="4mQ-lv-v6e"/>
                     </connections>
                 </button>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="fKw-Dr-8an">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKw-Dr-8an">
                     <rect key="frame" x="20" y="32" width="280" height="451"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" id="C2M-eJ-GtF" userLabel="About Container">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2M-eJ-GtF" userLabel="About Container">
                             <rect key="frame" x="0.0" y="0.0" width="280" height="451"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="0.93785743460000004" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
@@ -49,95 +49,115 @@
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <constraints>
+                <constraint firstItem="mcL-Nh-cWp" firstAttribute="top" secondItem="fKw-Dr-8an" secondAttribute="bottom" constant="17" id="13y-4y-k86"/>
+                <constraint firstItem="mcL-Nh-cWp" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="5Nw-Vv-l2j"/>
+                <constraint firstAttribute="bottom" secondItem="mcL-Nh-cWp" secondAttribute="bottom" constant="17" id="AoT-bC-xag"/>
+                <constraint firstAttribute="trailing" secondItem="mcL-Nh-cWp" secondAttribute="trailing" constant="20" id="KXZ-Cr-Ngp"/>
+                <constraint firstItem="fKw-Dr-8an" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="eto-Lt-m85"/>
+                <constraint firstAttribute="trailing" secondItem="fKw-Dr-8an" secondAttribute="trailing" constant="20" id="gXG-Fh-cUB"/>
+                <constraint firstItem="fKw-Dr-8an" firstAttribute="top" secondItem="1" secondAttribute="top" constant="32" id="yU5-xh-Gwt"/>
+            </constraints>
         </view>
         <view contentMode="scaleToFill" id="qbO-bb-8wM" userLabel="About Content">
             <rect key="frame" x="0.0" y="0.0" width="280" height="1284"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What is Onions?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3eS-hY-ftL">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What is Onions?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eS-hY-ftL">
                     <rect key="frame" x="10" y="7" width="260" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="NjH-c9-01v"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                     <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tkG-uj-Tk5">
-                    <rect key="frame" x="10" y="37" width="260" height="176"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkG-uj-Tk5">
+                    <rect key="frame" x="10" y="37" width="260" height="174"/>
                     <string key="text">Onions is a way to keep track of any text-based information in an ultra-secure fashion. Things like passwords, debit card information or social security numbers lend themselves perfectly for Onions. Onions isn't a closed box - it's open source. This means you can pore over the code and see just how secure it is as well.</string>
                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
                     <color key="textColor" red="0.28042204479999999" green="0.28042204479999999" blue="0.28042204479999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Secure?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iir-Yw-75M">
-                    <rect key="frame" x="10" y="239" width="260" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Secure?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iir-Yw-75M">
+                    <rect key="frame" x="10" y="237" width="260" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1Qv-MD-9qu"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                     <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1cO-HF-2AU">
-                    <rect key="frame" x="10" y="269" width="260" height="315"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cO-HF-2AU">
+                    <rect key="frame" x="10" y="267" width="260" height="310"/>
                     <string key="text">Onions uses a couple different methods to keep your data secure. From the server, your password is encrypted using BCrypt (http://en.wikipedia.org/wiki/Bcrypt), and your plaintext username is never stored, period. Both your username and password are SHA-256 hashed recursively for 15,000 rounds before being sent to the server for authentication. On the iPhone, AES-CBC-256 (with HMAC) encryption is employed to turn your various onions into gobbledy-gook before they're sent to the server over an SSL connection.</string>
                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
                     <color key="textColor" red="0.28042204479999999" green="0.28042204479999999" blue="0.28042204479999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Open Source?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mJT-CF-NlF">
-                    <rect key="frame" x="10" y="603" width="260" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Open Source?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJT-CF-NlF">
+                    <rect key="frame" x="10" y="596" width="260" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="8MQ-AF-OD5"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                     <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qjC-Ec-LAG">
-                    <rect key="frame" x="10" y="633" width="260" height="219"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjC-Ec-LAG">
+                    <rect key="frame" x="10" y="626" width="260" height="213"/>
                     <string key="text">There's only one real way to trust that everything is as secure as we say it is - and that's not by keeping us to our word. You can read the code to see how the app handles encryption and web service calls. Because it is open source, we would love feedback from the community - especially on methods to increase security and improve functionality. Don't be afraid to open a pull request!</string>
                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
                     <color key="textColor" red="0.28042204479999999" green="0.28042204479999999" blue="0.28042204479999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="But why free?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O1M-6A-cap">
-                    <rect key="frame" x="10" y="989" width="260" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="But why free?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1M-6A-cap">
+                    <rect key="frame" x="10" y="976" width="260" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="r2B-VN-y7c"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                     <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gFb-as-mk1">
-                    <rect key="frame" x="10" y="1019" width="260" height="195"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-as-mk1">
+                    <rect key="frame" x="10" y="1006" width="260" height="194"/>
                     <string key="text">Private information storage in the cloud should be free. With this in mind, we are offering 10 Onions with each free account. However, if you'd like more or want to help support the cause, you can purchase the Pro upgrade for a lifetime charge of $9.99 per account. This allows an unlimited amount of Onions to be stored, and any other future features we add.</string>
                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
                     <color key="textColor" red="0.28042204479999999" green="0.28042204479999999" blue="0.28042204479999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thanks for using Onions!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z3T-wH-e1H">
-                    <rect key="frame" x="10" y="1234" width="260" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thanks for using Onions!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3T-wH-e1H">
+                    <rect key="frame" x="10" y="1220" width="260" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="MwB-mw-0oj"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                     <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="https://github.com/onionsapp/Onions-iOS" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MoF-pm-RI0">
-                    <rect key="frame" x="10" y="863" width="260" height="49"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="https://github.com/onionsapp/Onions-iOS" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoF-pm-RI0">
+                    <rect key="frame" x="10" y="850" width="260" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="jHA-1a-ZNn"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="15"/>
                     <color key="textColor" red="0.71450172810000001" green="0.1302305386" blue="0.69884810730000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHub_Logo.png" id="Sdb-8g-NcI">
-                    <rect key="frame" x="51" y="906" width="179" height="56"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHub_Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sdb-8g-NcI">
+                    <rect key="frame" x="51" y="893" width="179" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="179" id="bec-iN-dlv"/>
+                        <constraint firstAttribute="height" constant="56" id="vwn-Q5-3t1"/>
+                    </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kcu-y1-1jg">
-                    <rect key="frame" x="10" y="873" width="250" height="89"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcu-y1-1jg">
+                    <rect key="frame" x="10" y="860" width="250" height="102"/>
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="102" id="CJQ-yU-k0B"/>
+                    </constraints>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -147,10 +167,57 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="mJT-CF-NlF" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="10" id="0Pf-Wj-frk"/>
+                <constraint firstItem="1cO-HF-2AU" firstAttribute="top" secondItem="iir-Yw-75M" secondAttribute="bottom" id="0bj-Vu-jWB"/>
+                <constraint firstAttribute="trailing" secondItem="MoF-pm-RI0" secondAttribute="trailing" constant="10" id="1qa-Tr-uND"/>
+                <constraint firstItem="MoF-pm-RI0" firstAttribute="top" secondItem="qjC-Ec-LAG" secondAttribute="bottom" constant="11" id="3dp-tU-Xhm"/>
+                <constraint firstItem="iir-Yw-75M" firstAttribute="top" secondItem="tkG-uj-Tk5" secondAttribute="bottom" constant="26" id="4o4-6K-1ff"/>
+                <constraint firstItem="z3T-wH-e1H" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="10" id="6Vu-Iz-ENw"/>
+                <constraint firstItem="O1M-6A-cap" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="10" id="6d6-Sl-dPE"/>
+                <constraint firstItem="MoF-pm-RI0" firstAttribute="top" secondItem="qjC-Ec-LAG" secondAttribute="bottom" constant="11" id="6ky-i5-aHq"/>
+                <constraint firstAttribute="trailing" secondItem="qjC-Ec-LAG" secondAttribute="trailing" constant="10" id="AGA-U9-aRi"/>
+                <constraint firstItem="3eS-hY-ftL" firstAttribute="top" secondItem="qbO-bb-8wM" secondAttribute="top" constant="7" id="Crg-2b-W46"/>
+                <constraint firstItem="qjC-Ec-LAG" firstAttribute="top" secondItem="mJT-CF-NlF" secondAttribute="bottom" id="DnA-MX-Yfj"/>
+                <constraint firstItem="kcu-y1-1jg" firstAttribute="top" secondItem="qjC-Ec-LAG" secondAttribute="bottom" constant="21" id="ErW-X1-W7m"/>
+                <constraint firstItem="MoF-pm-RI0" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="10" id="Ivj-KR-7dU"/>
+                <constraint firstAttribute="trailing" secondItem="O1M-6A-cap" secondAttribute="trailing" constant="10" id="JLM-yj-FcX"/>
+                <constraint firstAttribute="trailing" secondItem="Sdb-8g-NcI" secondAttribute="trailing" constant="50" id="K0J-86-gMe"/>
+                <constraint firstItem="gFb-as-mk1" firstAttribute="top" secondItem="O1M-6A-cap" secondAttribute="bottom" id="Kyi-lL-Ukk"/>
+                <constraint firstAttribute="trailing" secondItem="mJT-CF-NlF" secondAttribute="trailing" constant="10" id="LN6-Si-HIF"/>
+                <constraint firstItem="gFb-as-mk1" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="10" id="Ou7-Xp-FpP"/>
+                <constraint firstAttribute="trailing" secondItem="kcu-y1-1jg" secondAttribute="trailing" constant="20" id="R3R-fz-re0"/>
+                <constraint firstItem="iir-Yw-75M" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="10" id="Szu-aN-aA4"/>
+                <constraint firstItem="O1M-6A-cap" firstAttribute="top" secondItem="MoF-pm-RI0" secondAttribute="bottom" constant="77" id="VWd-qs-hWY"/>
+                <constraint firstItem="O1M-6A-cap" firstAttribute="top" secondItem="Sdb-8g-NcI" secondAttribute="bottom" constant="27" id="XCl-18-qpB"/>
+                <constraint firstAttribute="trailing" secondItem="gFb-as-mk1" secondAttribute="trailing" constant="10" id="ZE4-se-Neu"/>
+                <constraint firstAttribute="trailing" secondItem="iir-Yw-75M" secondAttribute="trailing" constant="10" id="ah4-YE-d2e"/>
+                <constraint firstItem="Sdb-8g-NcI" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="51" id="axL-ik-1TJ"/>
+                <constraint firstItem="z3T-wH-e1H" firstAttribute="top" secondItem="gFb-as-mk1" secondAttribute="bottom" constant="20" id="bbR-l9-K05"/>
+                <constraint firstItem="mJT-CF-NlF" firstAttribute="top" secondItem="1cO-HF-2AU" secondAttribute="bottom" constant="19" id="fh8-ei-Am4"/>
+                <constraint firstItem="tkG-uj-Tk5" firstAttribute="top" secondItem="3eS-hY-ftL" secondAttribute="bottom" id="kWb-wT-uRB"/>
+                <constraint firstAttribute="trailing" secondItem="3eS-hY-ftL" secondAttribute="trailing" constant="10" id="m0X-E0-W1b"/>
+                <constraint firstItem="qjC-Ec-LAG" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="10" id="pnl-Dj-7N2"/>
+                <constraint firstItem="tkG-uj-Tk5" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="10" id="r7E-XK-8ma"/>
+                <constraint firstItem="1cO-HF-2AU" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="10" id="shO-MI-AY5"/>
+                <constraint firstItem="3eS-hY-ftL" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="10" id="uV2-OV-A7I"/>
+                <constraint firstAttribute="trailing" secondItem="1cO-HF-2AU" secondAttribute="trailing" constant="10" id="wRu-Ly-eRW"/>
+                <constraint firstItem="Sdb-8g-NcI" firstAttribute="top" secondItem="qjC-Ec-LAG" secondAttribute="bottom" constant="54" id="x8L-Tt-bYN"/>
+                <constraint firstAttribute="trailing" secondItem="tkG-uj-Tk5" secondAttribute="trailing" constant="10" id="x9U-2M-JpH"/>
+                <constraint firstItem="O1M-6A-cap" firstAttribute="top" secondItem="kcu-y1-1jg" secondAttribute="bottom" constant="14" id="xBf-Ti-zao"/>
+                <constraint firstItem="kcu-y1-1jg" firstAttribute="leading" secondItem="qbO-bb-8wM" secondAttribute="leading" constant="10" id="yrc-r7-kCX"/>
+                <constraint firstAttribute="trailing" secondItem="z3T-wH-e1H" secondAttribute="trailing" constant="10" id="zoO-Fn-X79"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>
         <image name="GitHub_Logo.png" width="1000" height="410"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

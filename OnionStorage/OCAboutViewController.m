@@ -48,24 +48,14 @@ static NSString *kGithubLink = @"https://github.com/onionsapp/Onions-iOS";
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self setUpScrollView];
-    [self animateVCShowingUp];
 }
 
 
 #pragma mark - UI
 - (void)buildUI {
     [UIHelpers makeBorderForView:self.backButton withWidth:1 color:[UIColor colorWithWhite:1.0 alpha:0.25] cornerRadius:3];
-    
-    // Make gradient
-    CAGradientLayer *gradient = [UIHelpers purpleGradient];
-    gradient.frame = self.view.bounds;
-    [self.view.layer insertSublayer:gradient atIndex:0];
-    
-    // Set hidden initiallly
-    for (UIView *subview in self.view.subviews) {
-        subview.alpha = 0;
-    }
 }
 
 
@@ -74,26 +64,6 @@ static NSString *kGithubLink = @"https://github.com/onionsapp/Onions-iOS";
     [self.aboutScrollView setContentSize:CGSizeMake(self.aboutScrollView.frame.size.width, self.aboutContentView.frame.size.height)];
     [self.aboutScrollView setContentOffset:CGPointZero];
     [self.aboutScrollView addSubview:self.aboutContentView];
-}
-
-
-#pragma mark - Animations
-- (void)animateVCShowingUp {
-    [UIView animateWithDuration:0.3 animations:^{
-        for (UIView *subview in self.view.subviews) {
-            subview.alpha = 1;
-        }
-    }];
-}
-
-- (void)animateVCLeavingWithCompletion:(void (^)(void))completion {
-    [UIView animateWithDuration:0.3 animations:^{
-        for (UIView *subview in self.view.subviews) {
-            subview.alpha = 0;
-        }
-    } completion:^(BOOL fin){
-        completion();
-    }];
 }
 
 
@@ -107,7 +77,7 @@ static NSString *kGithubLink = @"https://github.com/onionsapp/Onions-iOS";
 
 #pragma mark - IBActions
 - (IBAction)didSelectBack:(id)sender {
-    [self animateVCLeavingWithCompletion:^{
+    [self hideUIWithAnimation:YES completion:^{
         OCViewController *oVC = [[OCViewController alloc] initWithNibName:@"OCViewController" bundle:nil];
         OCAppDelegate *appDelegate = (OCAppDelegate *)[[UIApplication sharedApplication] delegate];
         [appDelegate.mainNavigationController setViewControllers:@[oVC]];

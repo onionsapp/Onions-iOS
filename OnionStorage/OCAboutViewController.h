@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OCBaseViewController.h"
 
-@interface OCAboutViewController : UIViewController
+@interface OCAboutViewController : OCBaseViewController
 
 
 @end

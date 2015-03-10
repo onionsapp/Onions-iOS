@@ -62,7 +62,7 @@
 }
 
 - (void)update {
-    [self refresh];
+    [self fetch];
     [self decrypt];
 }
 

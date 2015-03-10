@@ -111,16 +111,6 @@
     [UIHelpers makeShadowForView:self.createContainer withRadius:3];
     [UIHelpers makeBorderForView:self.logoutButton withWidth:1 color:[UIColor colorWithWhite:1.0 alpha:0.25] cornerRadius:3];
     [UIHelpers makeBorderForView:self.createButton withWidth:1 color:[UIColor colorWithWhite:1.0 alpha:0.25] cornerRadius:3];
-    
-    // Make gradient
-    CAGradientLayer *gradient = [UIHelpers purpleGradient];
-    gradient.frame = self.view.bounds;
-    [self.view.layer insertSublayer:gradient atIndex:0];
-    
-    // Hide initially
-    for (UIView *subview in self.view.subviews) {
-        subview.alpha = 0;
-    }
 }
 
 -(void)addShadows {

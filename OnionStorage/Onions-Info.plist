@@ -9,20 +9,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>icon_29</string>
-				<string>icon_58</string>
-				<string>icon_80</string>
-				<string>icon_120</string>
-				<string>icon_57</string>
-				<string>icon_114</string>
-			</array>
-		</dict>
-	</dict>
+	<dict/>
+	<key>CFBundleIcons~ipad</key>
+	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>com.subvertllc.Onions</string>
 	<key>CFBundleInfoDictionaryVersion</key>
