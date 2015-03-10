@@ -15,12 +15,17 @@
         BOOL versionsMatch = YES;
         NSError *error;
         NSHTTPURLResponse *response;
-        NSData *responseData = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.onions.io/version"]] returningResponse:&response error:&error];
+        NSData *responseData = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://itunes.apple.com/lookup?id=687296481"]] returningResponse:&response error:&error];
         
         if (responseData) {
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
-            if (json && json[@"iOS"]) {
-                versionsMatch = [json[@"iOS"] isEqualToString:[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]];
+            if (json && json[@"results"]) {
+                NSDictionary *appResults = [json[@"results"] firstObject];
+                if (appResults) {
+                    if (appResults[@"version"]) {
+                        versionsMatch = [appResults[@"version"] isEqualToString:[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]];
+                    }
+                }
             }
         }
         
