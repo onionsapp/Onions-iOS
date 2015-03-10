@@ -45,4 +45,9 @@
     [self setSelectedBackgroundView:selView];
 }
 
+- (UIEdgeInsets)layoutMargins
+{
+    return UIEdgeInsetsZero;
+}
+
 @end
